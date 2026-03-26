@@ -1,0 +1,1142 @@
+[
+  {
+    "title":"Transformer-based Personalized Attention Mechanism for Medical Images with Clinical Records",
+    "authors":"Yusuke Takagi, Noriaki Hashimoto, Hiroki Masuda, Hiroaki Miyoshi",
+    "abstract":"In medical image diagnosis, identifying the attention region, i.e., the region of interest for which the diagnosis is made, is an important task. Various methods have been developed to automatically identify target regions from given medical images. However, in actual medical practice, the diagnosis is made based not only on the images but also on a variety of clinical records. This means that pathologists examine medical images with some prior knowledge of the patients and that the attention regions may change depending on the clinical records. In this study, we propose a method called the Personalized Attention Mechanism (PersAM), by which the attention regions in medical images are adaptively changed according to the clinical records. The primary idea of the PersAM method is to encode the relationships between the medical images and clinical records using a variant of Transformer architecture. To demonstrate the effectiveness of the PersAM method, we applied it to a large-scale digital pathology problem of identifying the subtypes of 842 malignant lymphoma patients based on their gigapixel whole slide images and clinical records.",
+    "year":2022,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2206.03003v2",
+    "arxiv_id":"2206.03003v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Dilated Neighborhood Attention Transformer",
+    "authors":"Ali Hassani, Humphrey Shi",
+    "abstract":"Transformers are quickly becoming one of the most heavily applied deep learning architectures across modalities, domains, and tasks. In vision, on top of ongoing efforts into plain transformers, hierarchical transformers have also gained significant attention, thanks to their performance and easy integration into existing frameworks. These models typically employ localized attention mechanisms, such as the sliding-window Neighborhood Attention (NA) or Swin Transformer's Shifted Window Self Attention. While effective at reducing self attention's quadratic complexity, local attention weakens two of the most desirable properties of self attention: long range inter-dependency modeling, and global receptive field. In this paper, we introduce Dilated Neighborhood Attention (DiNA), a natural, flexible and efficient extension to NA that can capture more global context and expand receptive fields exponentially at no additional cost. NA's local attention and DiNA's sparse global attention complement each other, and therefore we introduce Dilated Neighborhood Attention Transformer (DiNAT), a new hierarchical vision transformer built upon both. DiNAT variants enjoy significant improvements over strong baselines such as NAT, Swin, and ConvNeXt. Our large model is faster and ahead of its Swin counterpart by 1.6% box AP in COCO object detection, 1.4% mask AP in COCO instance segmentation, and 1.4% mIoU in ADE20K semantic segmentation. Paired with new frameworks, our large variant is the new state of the art panoptic segmentation model on COCO (58.5 PQ) and ADE20K (49.4 PQ), and instance segmentation model on Cityscapes (45.1 AP) and ADE20K (35.4 AP) (no extra data). It also matches the state of the art specialized semantic segmentation models on ADE20K (58.1 mIoU), and ranks second on Cityscapes (84.5 mIoU) (no extra data).",
+    "year":2022,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2209.15001v3",
+    "arxiv_id":"2209.15001v3",
+    "source":"arxiv"
+  },
+  {
+    "title":"Music Transformer",
+    "authors":"Cheng-Zhi Anna Huang, Ashish Vaswani, Jakob Uszkoreit, Noam Shazeer",
+    "abstract":"Music relies heavily on repetition to build structure and meaning. Self-reference occurs on multiple timescales, from motifs to phrases to reusing of entire sections of music, such as in pieces with ABA structure. The Transformer (Vaswani et al., 2017), a sequence model based on self-attention, has achieved compelling results in many generation tasks that require maintaining long-range coherence. This suggests that self-attention might also be well-suited to modeling music. In musical composition and performance, however, relative timing is critically important. Existing approaches for representing relative positional information in the Transformer modulate attention based on pairwise distance (Shaw et al., 2018). This is impractical for long sequences such as musical compositions since their memory complexity for intermediate relative information is quadratic in the sequence length. We propose an algorithm that reduces their intermediate memory requirement to linear in the sequence length. This enables us to demonstrate that a Transformer with our modified relative attention mechanism can generate minute-long compositions (thousands of steps, four times the length modeled in Oore et al., 2018) with compelling structure, generate continuations that coherently elaborate on a given motif, and in a seq2seq setup generate accompaniments conditioned on melodies. We evaluate the Transformer with our relative attention mechanism on two datasets, JSB Chorales and Piano-e-Competition, and obtain state-of-the-art results on the latter.",
+    "year":2018,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1809.04281v3",
+    "arxiv_id":"1809.04281v3",
+    "source":"arxiv"
+  },
+  {
+    "title":"D\u00e9j\u00e0 vu: A Contextualized Temporal Attention Mechanism for Sequential Recommendation",
+    "authors":"Jibang Wu, Renqin Cai, Hongning Wang",
+    "abstract":"Predicting users' preferences based on their sequential behaviors in history is challenging and crucial for modern recommender systems. Most existing sequential recommendation algorithms focus on transitional structure among the sequential actions, but largely ignore the temporal and context information, when modeling the influence of a historical event to current prediction.   In this paper, we argue that the influence from the past events on a user's current action should vary over the course of time and under different context. Thus, we propose a Contextualized Temporal Attention Mechanism that learns to weigh historical actions' influence on not only what action it is, but also when and how the action took place. More specifically, to dynamically calibrate the relative input dependence from the self-attention mechanism, we deploy multiple parameterized kernel functions to learn various temporal dynamics, and then use the context information to determine which of these reweighing kernels to follow for each input. In empirical evaluations on two large public recommendation datasets, our model consistently outperformed an extensive set of state-of-the-art sequential recommendation methods.",
+    "year":2020,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2002.00741v1",
+    "arxiv_id":"2002.00741v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Mask-Attention-Free Transformer for 3D Instance Segmentation",
+    "authors":"Xin Lai, Yuhui Yuan, Ruihang Chu, Yukang Chen",
+    "abstract":"Recently, transformer-based methods have dominated 3D instance segmentation, where mask attention is commonly involved. Specifically, object queries are guided by the initial instance masks in the first cross-attention, and then iteratively refine themselves in a similar manner. However, we observe that the mask-attention pipeline usually leads to slow convergence due to low-recall initial instance masks. Therefore, we abandon the mask attention design and resort to an auxiliary center regression task instead. Through center regression, we effectively overcome the low-recall issue and perform cross-attention by imposing positional prior. To reach this goal, we develop a series of position-aware designs. First, we learn a spatial distribution of 3D locations as the initial position queries. They spread over the 3D space densely, and thus can easily capture the objects in a scene with a high recall. Moreover, we present relative position encoding for the cross-attention and iterative refinement for more accurate position queries. Experiments show that our approach converges 4x faster than existing work, sets a new state of the art on ScanNetv2 3D instance segmentation benchmark, and also demonstrates superior performance across various datasets. Code and models are available at https:\/\/github.com\/dvlab-research\/Mask-Attention-Free-Transformer.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2309.01692v1",
+    "arxiv_id":"2309.01692v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Synthesis of Mechanism for single- and hybrid-tasks using Differential Evolution",
+    "authors":"F. Penunuri, R. Peon-Escalante, C. Villanueva, D. Pech-Oy",
+    "abstract":"The optimal dimensional synthesis for planar mechanisms using differential evolution (DE) is demonstrated. Four examples are included: in the first case, the synthesis of a mechanism for hybrid-tasks, considering path generation, function generation, and motion generation, is carried out. The second and third cases pertain to path generation, with and without prescribed timing. Finally, the synthesis of an Ackerman mechanism is reported. Order defect problem is solved by manipulating individuals instead of penalizing or discretizing the search space for the parameters. A technique that consists in applying a transformation in order to satisfy the Grashof and crank conditions to generate an initial elitist population is introduced. As a result, the evolutionary algorithm increases its efficiency.",
+    "year":2011,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1102.2017v2",
+    "arxiv_id":"1102.2017v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Attention Guided CAM: Visual Explanations of Vision Transformer Guided by Self-Attention",
+    "authors":"Saebom Leem, Hyunseok Seo",
+    "abstract":"Vision Transformer(ViT) is one of the most widely used models in the computer vision field with its great performance on various tasks. In order to fully utilize the ViT-based architecture in various applications, proper visualization methods with a decent localization performance are necessary, but these methods employed in CNN-based models are still not available in ViT due to its unique structure. In this work, we propose an attention-guided visualization method applied to ViT that provides a high-level semantic explanation for its decision. Our method selectively aggregates the gradients directly propagated from the classification output to each self-attention, collecting the contribution of image features extracted from each location of the input image. These gradients are additionally guided by the normalized self-attention scores, which are the pairwise patch correlation scores. They are used to supplement the gradients on the patch-level context information efficiently detected by the self-attention mechanism. This approach of our method provides elaborate high-level semantic explanations with great localization performance only with the class labels. As a result, our method outperforms the previous leading explainability methods of ViT in the weakly-supervised localization task and presents great capability in capturing the full instances of the target class object. Meanwhile, our method provides a visualization that faithfully explains the model, which is demonstrated in the perturbation comparison test.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2402.04563v1",
+    "arxiv_id":"2402.04563v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Synthesis of Spherical 4R Mechanism for Path Generation using Differential Evolution",
+    "authors":"F. Penunuri, R. Peon-Escalante, C. Villanueva, Carlos A. Cruz-Villar",
+    "abstract":"The problem of path generation for the spherical 4R mechanism is solved using the Differential Evolution algorithm (DE). Formulas for the spherical geodesics are employed in order to obtain the parametric equation for the generated trajectory. Direct optimization of the objective function gives the solution to the path generation task without prescribed timing. Therefore, there is no need to separate this task into two stages to make the optimization. Moreover, the order defect problem can be solved without difficulty by means of manipulations of the individuals in the DE algorithm. Two examples of optimum synthesis showing the simplicity and effectiveness of this approach are included.",
+    "year":2011,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1112.2954v2",
+    "arxiv_id":"1112.2954v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Forgetting Transformer: Softmax Attention with a Forget Gate",
+    "authors":"Zhixuan Lin, Evgenii Nikishin, Xu Owen He, Aaron Courville",
+    "abstract":"An essential component of modern recurrent sequence models is the forget gate. While Transformers do not have an explicit recurrent form, we show that a forget gate can be naturally incorporated into Transformers by down-weighting the unnormalized attention scores in a data-dependent way. We name this attention mechanism Forgetting Attention and the resulting model the Forgetting Transformer (FoX). We show that FoX outperforms the Transformer on long-context language modeling, length extrapolation, and short-context downstream tasks, while performing on par with the Transformer on long-context downstream tasks. Moreover, it is compatible with the FlashAttention algorithm and does not require any positional embeddings. Several analyses, including the needle-in-the-haystack test, show that FoX also retains the Transformer's superior long-context capabilities over recurrent sequence models such as Mamba-2, HGRN2, and DeltaNet. We also introduce a \"Pro\" block design that incorporates some common architectural components in recurrent sequence models and find it significantly improves the performance of both FoX and the Transformer. Our code is available at https:\/\/github.com\/zhixuan-lin\/forgetting-transformer.",
+    "year":2025,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2503.02130v2",
+    "arxiv_id":"2503.02130v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Benign Overfitting in Token Selection of Attention Mechanism",
+    "authors":"Keitaro Sakamoto, Issei Sato",
+    "abstract":"Attention mechanism is a fundamental component of the transformer model and plays a significant role in its success. However, the theoretical understanding of how attention learns to select tokens is still an emerging area of research. In this work, we study the training dynamics and generalization ability of the attention mechanism under classification problems with label noise. We show that, with the characterization of signal-to-noise ratio (SNR), the token selection of attention mechanism achieves benign overfitting, i.e., maintaining high generalization performance despite fitting label noise. Our work also demonstrates an interesting delayed acquisition of generalization after an initial phase of overfitting. Finally, we provide experiments to support our theoretical analysis using both synthetic and real-world datasets.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2409.17625v3",
+    "arxiv_id":"2409.17625v3",
+    "source":"arxiv"
+  },
+  {
+    "title":"Efficient Mixed Transformer for Single Image Super-Resolution",
+    "authors":"Ling Zheng, Jinchen Zhu, Jinpeng Shi, Shizhuang Weng",
+    "abstract":"Recently, Transformer-based methods have achieved impressive results in single image super-resolution (SISR). However, the lack of locality mechanism and high complexity limit their application in the field of super-resolution (SR). To solve these problems, we propose a new method, Efficient Mixed Transformer (EMT) in this study. Specifically, we propose the Mixed Transformer Block (MTB), consisting of multiple consecutive transformer layers, in some of which the Pixel Mixer (PM) is used to replace the Self-Attention (SA). PM can enhance the local knowledge aggregation with pixel shifting operations. At the same time, no additional complexity is introduced as PM has no parameters and floating-point operations. Moreover, we employ striped window for SA (SWSA) to gain an efficient global dependency modelling by utilizing image anisotropy. Experimental results show that EMT outperforms the existing methods on benchmark dataset and achieved state-of-the-art performance. The Code is available at https:\/\/github.com\/Fried-Rice-Lab\/FriedRiceLab.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2305.11403v5",
+    "arxiv_id":"2305.11403v5",
+    "source":"arxiv"
+  },
+  {
+    "title":"Pay Attention to What You Need",
+    "authors":"Yifei Gao, Shaohong Chen, Lei Wang, Ruiting Dai",
+    "abstract":"Although large language models (LLMs) have achieved significant success in natural language processing, they still struggle with long-context comprehension. Traditional approaches to mitigating this issue typically rely on fine-tuning or retraining, which is both resource-intensive and challenging to deploy in lightweight industrial settings. In this paper, we investigate the potential to accomplish this without any additional resources. Through an in-depth study of the attention mechanism in LLMs, we propose a method called Scaled ReAttention (SRA) to strengthen LLMs' ability to interpret and retrieve information by strategically manipulating their attention scores during inference. Through extensive experiments, we demonstrate that integrating SRA significantly boosts LLMs' performance on a variety of downstream tasks, highlighting its practical potential for enhancing language understanding without incurring the overhead of traditional training.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2307.13365v3",
+    "arxiv_id":"2307.13365v3",
+    "source":"arxiv"
+  },
+  {
+    "title":"Gated Sparse Attention: Combining Computational Efficiency with Training Stability for Long-Context Language Models",
+    "authors":"Alfred Shen, Aaron Shen",
+    "abstract":"The computational burden of attention in long-context language models has motivated two largely independent lines of work: sparse attention mechanisms that reduce complexity by attending to selected tokens, and gated attention variants that improve training sta-bility while mitigating the attention sink phenomenon. We observe that these approaches address complementary weaknesses and propose Gated Sparse Attention (GSA), an architecture that realizes the benefits of both. GSA incorporates a gated lightning indexer with sigmoid activations that produce bounded, interpretable selection scores, an adaptive sparsity controller that modulates the number of attended tokens based on local uncertainty, and dual gating at the value and output stages. We establish theoretical foundations for the approach, including complexity analysis, expressiveness results, and convergence guarantees. In experiments with 1.7B parameter models trained on 400B tokens, GSA matches the efficiency of sparse-only baselines (12-16x speedup at 128K context) while achieving the quality gains associated with gated attention: perplexity improves from 6.03 to 5.70, RULER scores at 128K context nearly double, and attention to the first token, a proxy for attention sinks, drops from 47% to under 4%. Training stability improves markedly, with loss spikes reduced by 98%.",
+    "year":2026,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2601.15305v1",
+    "arxiv_id":"2601.15305v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"MLP Can Be A Good Transformer Learner",
+    "authors":"Sihao Lin, Pumeng Lyu, Dongrui Liu, Tao Tang",
+    "abstract":"Self-attention mechanism is the key of the Transformer but often criticized for its computation demands. Previous token pruning works motivate their methods from the view of computation redundancy but still need to load the full network and require same memory costs. This paper introduces a novel strategy that simplifies vision transformers and reduces computational load through the selective removal of non-essential attention layers, guided by entropy considerations. We identify that regarding the attention layer in bottom blocks, their subsequent MLP layers, i.e. two feed-forward layers, can elicit the same entropy quantity. Meanwhile, the accompanied MLPs are under-exploited since they exhibit smaller feature entropy compared to those MLPs in the top blocks. Therefore, we propose to integrate the uninformative attention layers into their subsequent counterparts by degenerating them into identical mapping, yielding only MLP in certain transformer blocks. Experimental results on ImageNet-1k show that the proposed method can remove 40% attention layer of DeiT-B, improving throughput and memory bound without performance compromise. Code is available at https:\/\/github.com\/sihaoevery\/lambda_vit.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2404.05657v1",
+    "arxiv_id":"2404.05657v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Vision Transformer with Quadrangle Attention",
+    "authors":"Qiming Zhang, Jing Zhang, Yufei Xu, Dacheng Tao",
+    "abstract":"Window-based attention has become a popular choice in vision transformers due to its superior performance, lower computational complexity, and less memory footprint. However, the design of hand-crafted windows, which is data-agnostic, constrains the flexibility of transformers to adapt to objects of varying sizes, shapes, and orientations. To address this issue, we propose a novel quadrangle attention (QA) method that extends the window-based attention to a general quadrangle formulation. Our method employs an end-to-end learnable quadrangle regression module that predicts a transformation matrix to transform default windows into target quadrangles for token sampling and attention calculation, enabling the network to model various targets with different shapes and orientations and capture rich context information. We integrate QA into plain and hierarchical vision transformers to create a new architecture named QFormer, which offers minor code modifications and negligible extra computational cost. Extensive experiments on public benchmarks demonstrate that QFormer outperforms existing representative vision transformers on various vision tasks, including classification, object detection, semantic segmentation, and pose estimation. The code will be made publicly available at \\href{https:\/\/github.com\/ViTAE-Transformer\/QFormer}{QFormer}.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2303.15105v1",
+    "arxiv_id":"2303.15105v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Design and Analysis of a Robotic Lizard using Five-Bar Mechanism",
+    "authors":"Rajashekhar V S, Dinakar Raj C K, Vishwesh S, Selva Perumal E",
+    "abstract":"Legged robots are being used to explore rough terrains as they are capable of traversing gaps and obstacles. In this paper, a new mechanism is designed to replicate a robotic lizard using integrated five-bar mechanisms. There are two five bar mechanisms from which two more are formed by connecting the links in a particular order. The legs are attached to the links of the five bar mechanism such that, when the mechanism is actuated, they move the robot forward. Position analysis using vector loop approach has been done for the mechanism. A prototype has been built and controlled using servo motors to verify the robotic lizard mechanism.",
+    "year":2021,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2107.12614v1",
+    "arxiv_id":"2107.12614v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"SKGE-SWIN: End-To-End Autonomous Vehicle Waypoint Prediction and Navigation Using Skip Stage Swin Transformer",
+    "authors":"Fachri Najm Noer Kartiman,  Rasim, Yaya Wihardi, Nurul Hasanah",
+    "abstract":"Focusing on the development of an end-to-end autonomous vehicle model with pixel-to-pixel context awareness, this research proposes the SKGE-Swin architecture. This architecture utilizes the Swin Transformer with a skip-stage mechanism to broaden feature representation globally and at various network levels. This approach enables the model to extract information from distant pixels by leveraging the Swin Transformer's Shifted Window-based Multi-head Self-Attention (SW-MSA) mechanism and to retain critical information from the initial to the final stages of feature extraction, thereby enhancing its capability to comprehend complex patterns in the vehicle's surroundings. The model is evaluated on the CARLA platform using adversarial scenarios to simulate real-world conditions. Experimental results demonstrate that the SKGE-Swin architecture achieves a superior Driving Score compared to previous methods. Furthermore, an ablation study will be conducted to evaluate the contribution of each architectural component, including the influence of skip connections and the use of the Swin Transformer, in improving model performance.",
+    "year":2025,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2508.20762v1",
+    "arxiv_id":"2508.20762v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Thermodynamic Isomorphism of Transformers: A Lagrangian Approach to Attention Dynamics",
+    "authors":"Gunn Kim",
+    "abstract":"We propose an effective field-theoretic framework for analyzing Transformer attention through a thermodynamic lens. By constructing a Lagrangian on the information manifold equipped with the Fisher metric, we show that, within the Shannon--Boltzmann entropy framework, the Softmax function arises as a stationary solution minimizing a Helmholtz free energy functional. This establishes a formal correspondence between scaled dot-product attention and canonical ensemble statistics. Extending this mapping to macroscopic observables, we define an effective specific heat associated with fluctuations of the attention energy landscape. In controlled experiments on the modular addition task ($p = 19$--$113$), we observe a robust peak in this fluctuation measure that consistently precedes the onset of generalization. While no asymptotic power-law divergence is detected in this finite-depth regime, the reproducible enhancement of energy variance suggests a critical-like crossover accompanying representational reorganization. Our framework provides a unified statistical-mechanical perspective on attention scaling, training dynamics, and positional encoding, interpreting the phenomena as emergent properties of an effective thermodynamic system rather than isolated heuristics. Although the present results indicate finite-size crossover behavior rather than a strict phase transition, they motivate further investigation into scaling limits of deep architectures through fluctuation-based observables.",
+    "year":2026,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2602.08216v2",
+    "arxiv_id":"2602.08216v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Generalized Probabilistic Attention Mechanism in Transformers",
+    "authors":"DongNyeong Heo, Heeyoul Choi",
+    "abstract":"The Transformer architecture has become widely adopted due to its demonstrated success, attributed to the attention mechanism at its core. Despite these successes, the attention mechanism of Transformers is associated with two well-known issues: rank-collapse and gradient vanishing. In this paper, we present a theoretical analysis that it is inherently difficult to address both issues simultaneously in the conventional attention mechanism. To handle these issues, we introduce a novel class of attention mechanism, referred to as generalized probabilistic attention mechanism (GPAM), and its dual-attention implementation within the Transformer architecture. Unlike conventional attention mechanisms, GPAM allows for negative attention scores while preserving a fixed total sum. We provide theoretical evidence that the proposed dual-attention GPAM (daGPAM) effectively mitigates both the rank-collapse and gradient vanishing issues which are difficult to resolve simultaneously with the conventional attention mechanisms. Furthermore, we empirically validate this theoretical evidence, demonstrating the superiority of daGPAM compared to other alternative attention mechanisms that were proposed to address the same issues. Additionally, we demonstrate the practical benefits of GPAM in natural language processing tasks, such as language modeling and neural machine translation.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2410.15578v1",
+    "arxiv_id":"2410.15578v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"PyramidTNT: Improved Transformer-in-Transformer Baselines with Pyramid Architecture",
+    "authors":"Kai Han, Jianyuan Guo, Yehui Tang, Yunhe Wang",
+    "abstract":"Transformer networks have achieved great progress for computer vision tasks. Transformer-in-Transformer (TNT) architecture utilizes inner transformer and outer transformer to extract both local and global representations. In this work, we present new TNT baselines by introducing two advanced designs: 1) pyramid architecture, and 2) convolutional stem. The new \"PyramidTNT\" significantly improves the original TNT by establishing hierarchical representations. PyramidTNT achieves better performances than the previous state-of-the-art vision transformers such as Swin Transformer. We hope this new baseline will be helpful to the further research and application of vision transformer. Code will be available at https:\/\/github.com\/huawei-noah\/CV-Backbones\/tree\/master\/tnt_pytorch.",
+    "year":2022,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2201.00978v1",
+    "arxiv_id":"2201.00978v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"On the Surprising Effectiveness of Attention Transfer for Vision Transformers",
+    "authors":"Alexander C. Li, Yuandong Tian, Beidi Chen, Deepak Pathak",
+    "abstract":"Conventional wisdom suggests that pre-training Vision Transformers (ViT) improves downstream performance by learning useful representations. Is this actually true? We investigate this question and find that the features and representations learned during pre-training are not essential. Surprisingly, using only the attention patterns from pre-training (i.e., guiding how information flows between tokens) is sufficient for models to learn high quality features from scratch and achieve comparable downstream performance. We show this by introducing a simple method called attention transfer, where only the attention patterns from a pre-trained teacher ViT are transferred to a student, either by copying or distilling the attention maps. Since attention transfer lets the student learn its own features, ensembling it with a fine-tuned teacher also further improves accuracy on ImageNet. We systematically study various aspects of our findings on the sufficiency of attention maps, including distribution shift settings where they underperform fine-tuning. We hope our exploration provides a better understanding of what pre-training accomplishes and leads to a useful alternative to the standard practice of fine-tuning",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2411.09702v1",
+    "arxiv_id":"2411.09702v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Efficient Content-Based Sparse Attention with Routing Transformers",
+    "authors":"Aurko Roy, Mohammad Saffar, Ashish Vaswani, David Grangier",
+    "abstract":"Self-attention has recently been adopted for a wide range of sequence modeling problems. Despite its effectiveness, self-attention suffers from quadratic compute and memory requirements with respect to sequence length. Successful approaches to reduce this complexity focused on attending to local sliding windows or a small set of locations independent of content. Our work proposes to learn dynamic sparse attention patterns that avoid allocating computation and memory to attend to content unrelated to the query of interest. This work builds upon two lines of research: it combines the modeling flexibility of prior work on content-based sparse attention with the efficiency gains from approaches based on local, temporal sparse attention. Our model, the Routing Transformer, endows self-attention with a sparse routing module based on online k-means while reducing the overall complexity of attention to $O\\left(n^{1.5}d\\right)$ from $O\\left(n^2d\\right)$ for sequence length $n$ and hidden dimension $d$. We show that our model outperforms comparable sparse attention models on language modeling on Wikitext-103 (15.8 vs 18.3 perplexity) as well as on image generation on ImageNet-64 (3.43 vs 3.44 bits\/dim) while using fewer self-attention layers. Additionally, we set a new state-of-the-art on the newly released PG-19 data-set, obtaining a test perplexity of 33.2 with a 22 layer Routing Transformer model trained on sequences of length 8192.",
+    "year":2020,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2003.05997v5",
+    "arxiv_id":"2003.05997v5",
+    "source":"arxiv"
+  },
+  {
+    "title":"Primal-Attention: Self-attention through Asymmetric Kernel SVD in Primal Representation",
+    "authors":"Yingyi Chen, Qinghua Tao, Francesco Tonin, Johan A. K. Suykens",
+    "abstract":"Recently, a new line of works has emerged to understand and improve self-attention in Transformers by treating it as a kernel machine. However, existing works apply the methods for symmetric kernels to the asymmetric self-attention, resulting in a nontrivial gap between the analytical understanding and numerical implementation. In this paper, we provide a new perspective to represent and optimize self-attention through asymmetric Kernel Singular Value Decomposition (KSVD), which is also motivated by the low-rank property of self-attention normally observed in deep layers. Through asymmetric KSVD, $i$) a primal-dual representation of self-attention is formulated, where the optimization objective is cast to maximize the projection variances in the attention outputs; $ii$) a novel attention mechanism, i.e., Primal-Attention, is proposed via the primal representation of KSVD, avoiding explicit computation of the kernel matrix in the dual; $iii$) with KKT conditions, we prove that the stationary solution to the KSVD optimization in Primal-Attention yields a zero-value objective. In this manner, KSVD optimization can be implemented by simply minimizing a regularization loss, so that low-rank property is promoted without extra decomposition. Numerical experiments show state-of-the-art performance of our Primal-Attention with improved efficiency. Moreover, we demonstrate that the deployed KSVD optimization regularizes Primal-Attention with a sharper singular value decay than that of the canonical self-attention, further verifying the great potential of our method. To the best of our knowledge, this is the first work that provides a primal-dual representation for the asymmetric kernel in self-attention and successfully applies it to modeling and optimization.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2305.19798v2",
+    "arxiv_id":"2305.19798v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Self-Attention as Distributional Projection: A Unified Interpretation of Transformer Architecture",
+    "authors":"Nihal Mehta",
+    "abstract":"This paper presents a mathematical interpretation of self-attention by connecting it to distributional semantics principles. We show that self-attention emerges from projecting corpus-level co-occurrence statistics into sequence context. Starting from the co-occurrence matrix underlying GloVe embeddings, we demonstrate how the projection naturally captures contextual influence, with the query-key-value mechanism arising as the natural asymmetric extension for modeling directional relationships. Positional encodings and multi-head attention then follow as structured refinements of this same projection principle. Our analysis demonstrates that the Transformer architecture's particular algebraic form follows from these projection principles rather than being an arbitrary design choice.",
+    "year":2025,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2511.13780v1",
+    "arxiv_id":"2511.13780v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Self-Attention And Beyond the Infinite: Towards Linear Transformers with Infinite Self-Attention",
+    "authors":"Giorgio Roffo, Luke Palmer, Nilli Lavie",
+    "abstract":"The quadratic cost of softmax attention limits Transformer scalability in high-resolution vision. We introduce Infinite Self-Attention (InfSA), a spectral reformulation that treats each attention layer as a diffusion step on a content-adaptive token graph, accumulating multi-hop interactions through a discounted Neumann series over attention matrices. This links self-attention to classical graph centrality (Katz, PageRank, eigenvector centrality) for interpretable token weighting. We also show the Neumann kernel equals the fundamental matrix of an absorbing Markov chain, so a token's centrality is its expected number of random-walk visits before absorption. We then propose Linear-InfSA, a linear-time variant that approximates the principal eigenvector of the implicit attention operator without forming the full attention matrix. It keeps an auxiliary state of fixed size proportional to per-head dimension dh (independent of sequence length N), is drop-in compatible with Vision Transformers, and supports stable training at 4096 by 4096 and inference at 9216 by 9216 (about 332k tokens). In a 4-layer ViT (53.5M parameters, 59 GFLOPs at 224 by 224), Linear-InfSA reaches 84.7% top-1 on ImageNet-1K, a +3.2 point architectural gain over an equal-depth softmax ViT trained with the same recipe. On ImageNet-V2, InfViT variants outperform all compared baselines (up to 79.8% vs 76.8%), indicating robustness under distribution shift. On an A100 40GB GPU, Linear-InfViT runs at 231 images\/s and 0.87 J\/image (13x better throughput and energy than equal-depth ViT) and is the only tested model to complete 9216 by 9216 inference without out-of-memory. The linear approximation closely matches the dominant eigenvector of the quadratic operator (cosine 0.985). Code available at: https:\/\/huggingface.co\/groffo\/infinite-self-attention or https:\/\/github.com\/giorgioroffo\/infinite-self-attention",
+    "year":2026,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2603.00175v4",
+    "arxiv_id":"2603.00175v4",
+    "source":"arxiv"
+  },
+  {
+    "title":"Trading with the Momentum Transformer: An Intelligent and Interpretable Architecture",
+    "authors":"Kieran Wood, Sven Giegerich, Stephen Roberts, Stefan Zohren",
+    "abstract":"We introduce the Momentum Transformer, an attention-based deep-learning architecture, which outperforms benchmark time-series momentum and mean-reversion trading strategies. Unlike state-of-the-art Long Short-Term Memory (LSTM) architectures, which are sequential in nature and tailored to local processing, an attention mechanism provides our architecture with a direct connection to all previous time-steps. Our architecture, an attention-LSTM hybrid, enables us to learn longer-term dependencies, improves performance when considering returns net of transaction costs and naturally adapts to new market regimes, such as during the SARS-CoV-2 crisis. Via the introduction of multiple attention heads, we can capture concurrent regimes, or temporal dynamics, which are occurring at different timescales. The Momentum Transformer is inherently interpretable, providing us with greater insights into our deep-learning momentum trading strategy, including the importance of different factors over time and the past time-steps which are of the greatest significance to the model.",
+    "year":2021,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2112.08534v3",
+    "arxiv_id":"2112.08534v3",
+    "source":"arxiv"
+  },
+  {
+    "title":"Visual Attention Network",
+    "authors":"Meng-Hao Guo, Cheng-Ze Lu, Zheng-Ning Liu, Ming-Ming Cheng",
+    "abstract":"While originally designed for natural language processing tasks, the self-attention mechanism has recently taken various computer vision areas by storm. However, the 2D nature of images brings three challenges for applying self-attention in computer vision. (1) Treating images as 1D sequences neglects their 2D structures. (2) The quadratic complexity is too expensive for high-resolution images. (3) It only captures spatial adaptability but ignores channel adaptability. In this paper, we propose a novel linear attention named large kernel attention (LKA) to enable self-adaptive and long-range correlations in self-attention while avoiding its shortcomings. Furthermore, we present a neural network based on LKA, namely Visual Attention Network (VAN). While extremely simple, VAN surpasses similar size vision transformers(ViTs) and convolutional neural networks(CNNs) in various tasks, including image classification, object detection, semantic segmentation, panoptic segmentation, pose estimation, etc. For example, VAN-B6 achieves 87.8% accuracy on ImageNet benchmark and set new state-of-the-art performance (58.2 PQ) for panoptic segmentation. Besides, VAN-B2 surpasses Swin-T 4% mIoU (50.1 vs. 46.1) for semantic segmentation on ADE20K benchmark, 2.6% AP (48.8 vs. 46.2) for object detection on COCO dataset. It provides a novel method and a simple yet strong baseline for the community. Code is available at https:\/\/github.com\/Visual-Attention-Network.",
+    "year":2022,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2202.09741v5",
+    "arxiv_id":"2202.09741v5",
+    "source":"arxiv"
+  },
+  {
+    "title":"Learning to Cluster Faces via Transformer",
+    "authors":"Jinxing Ye, Xioajiang Peng, Baigui Sun, Kai Wang",
+    "abstract":"Face clustering is a useful tool for applications like automatic face annotation and retrieval. The main challenge is that it is difficult to cluster images from the same identity with different face poses, occlusions, and image quality. Traditional clustering methods usually ignore the relationship between individual images and their neighbors which may contain useful context information. In this paper, we repurpose the well-known Transformer and introduce a Face Transformer for supervised face clustering. In Face Transformer, we decompose the face clustering into two steps: relation encoding and linkage predicting. Specifically, given a face image, a \\textbf{relation encoder} module aggregates local context information from its neighbors and a \\textbf{linkage predictor} module judges whether a pair of images belong to the same cluster or not. In the local linkage graph view, Face Transformer can generate more robust node and edge representations compared to existing methods. Experiments on both MS-Celeb-1M and DeepFashion show that our method achieves state-of-the-art performance, e.g., 91.12\\% in pairwise F-score on MS-Celeb-1M.",
+    "year":2021,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2104.11502v1",
+    "arxiv_id":"2104.11502v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Beyond Self-attention: External Attention using Two Linear Layers for Visual Tasks",
+    "authors":"Meng-Hao Guo, Zheng-Ning Liu, Tai-Jiang Mu, Shi-Min Hu",
+    "abstract":"Attention mechanisms, especially self-attention, have played an increasingly important role in deep feature representation for visual tasks. Self-attention updates the feature at each position by computing a weighted sum of features using pair-wise affinities across all positions to capture the long-range dependency within a single sample. However, self-attention has quadratic complexity and ignores potential correlation between different samples. This paper proposes a novel attention mechanism which we call external attention, based on two external, small, learnable, shared memories, which can be implemented easily by simply using two cascaded linear layers and two normalization layers; it conveniently replaces self-attention in existing popular architectures. External attention has linear complexity and implicitly considers the correlations between all data samples. We further incorporate the multi-head mechanism into external attention to provide an all-MLP architecture, external attention MLP (EAMLP), for image classification. Extensive experiments on image classification, object detection, semantic segmentation, instance segmentation, image generation, and point cloud analysis reveal that our method provides results comparable or superior to the self-attention mechanism and some of its variants, with much lower computational and memory costs.",
+    "year":2021,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2105.02358v2",
+    "arxiv_id":"2105.02358v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Integrating Three Mechanisms of Visual Attention for Active Visual Search",
+    "authors":"Amir Rasouli, John K. Tsotsos",
+    "abstract":"Algorithms for robotic visual search can benefit from the use of visual attention methods in order to reduce computational costs. Here, we describe how three distinct mechanisms of visual attention can be integrated and productively used to improve search performance. The first is viewpoint selection as has been proposed earlier using a greedy search over a probabilistic occupancy grid representation. The second is top-down object-based attention using a histogram backprojection method, also previously described. The third is visual saliency. This is novel in the sense that it is not used as a region-of-interest method for the current image but rather as a noncombinatorial form of look-ahead in search for future viewpoint selection. Additionally, the integration of these three attentional schemes within a single framework is unique and not previously studied. We examine our proposed method in scenarios where little or no information regarding the environment is available. Through extensive experiments on a mobile robot, we show that our method improves visual search performance by reducing the time and number of actions required.",
+    "year":2017,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1702.04292v1",
+    "arxiv_id":"1702.04292v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Toward Interpretable Music Tagging with Self-Attention",
+    "authors":"Minz Won, Sanghyuk Chun, Xavier Serra",
+    "abstract":"Self-attention is an attention mechanism that learns a representation by relating different positions in the sequence. The transformer, which is a sequence model solely based on self-attention, and its variants achieved state-of-the-art results in many natural language processing tasks. Since music composes its semantics based on the relations between components in sparse positions, adopting the self-attention mechanism to solve music information retrieval (MIR) problems can be beneficial. Hence, we propose a self-attention based deep sequence model for music tagging. The proposed architecture consists of shallow convolutional layers followed by stacked Transformer encoders. Compared to conventional approaches using fully convolutional or recurrent neural networks, our model is more interpretable while reporting competitive results. We validate the performance of our model with the MagnaTagATune and the Million Song Dataset. In addition, we demonstrate the interpretability of the proposed architecture with a heat map visualization.",
+    "year":2019,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1906.04972v1",
+    "arxiv_id":"1906.04972v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Improving Sample Quality of Diffusion Models Using Self-Attention Guidance",
+    "authors":"Susung Hong, Gyuseong Lee, Wooseok Jang, Seungryong Kim",
+    "abstract":"Denoising diffusion models (DDMs) have attracted attention for their exceptional generation quality and diversity. This success is largely attributed to the use of class- or text-conditional diffusion guidance methods, such as classifier and classifier-free guidance. In this paper, we present a more comprehensive perspective that goes beyond the traditional guidance methods. From this generalized perspective, we introduce novel condition- and training-free strategies to enhance the quality of generated images. As a simple solution, blur guidance improves the suitability of intermediate samples for their fine-scale information and structures, enabling diffusion models to generate higher quality samples with a moderate guidance scale. Improving upon this, Self-Attention Guidance (SAG) uses the intermediate self-attention maps of diffusion models to enhance their stability and efficacy. Specifically, SAG adversarially blurs only the regions that diffusion models attend to at each iteration and guides them accordingly. Our experimental results show that our SAG improves the performance of various diffusion models, including ADM, IDDPM, Stable Diffusion, and DiT. Moreover, combining SAG with conventional guidance methods leads to further improvement.",
+    "year":2022,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2210.00939v6",
+    "arxiv_id":"2210.00939v6",
+    "source":"arxiv"
+  },
+  {
+    "title":"SMR-Net:Robot Snap Detection Based on Multi-Scale Features and Self-Attention Network",
+    "authors":"Kuanxu Hou",
+    "abstract":"In robot automated assembly, snap assembly precision and efficiency directly determine overall production quality. As a core prerequisite, snap detection and localization critically affect subsequent assembly success. Traditional visual methods suffer from poor robustness and large localization errors when handling complex scenarios (e.g., transparent or low-contrast snaps), failing to meet high-precision assembly demands. To address this, this paper designs a dedicated sensor and proposes SMR-Net, an self-attention-based multi-scale object detection algorithm, to synergistically enhance detection and localization performance. SMR-Net adopts an attention-enhanced multi-scale feature fusion architecture: raw sensor data is encoded via an attention-embedded feature extractor to strengthen key snap features and suppress noise; three multi-scale feature maps are processed in parallel with standard and dilated convolution for dimension unification while preserving resolution; an adaptive reweighting network dynamically assigns weights to fused features, generating fine representations integrating details and global semantics. Experimental results on Type A and Type B snap datasets show SMR-Net outperforms traditional Faster R-CNN significantly: Intersection over Union (IoU) improves by 6.52% and 5.8%, and mean Average Precision (mAP) increases by 2.8% and 1.5% respectively. This fully demonstrates the method's superiority in complex snap detection and localization tasks.",
+    "year":2026,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2603.01036v1",
+    "arxiv_id":"2603.01036v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Self-Attention through Kernel-Eigen Pair Sparse Variational Gaussian Processes",
+    "authors":"Yingyi Chen, Qinghua Tao, Francesco Tonin, Johan A. K. Suykens",
+    "abstract":"While the great capability of Transformers significantly boosts prediction accuracy, it could also yield overconfident predictions and require calibrated uncertainty estimation, which can be commonly tackled by Gaussian processes (GPs). Existing works apply GPs with symmetric kernels under variational inference to the attention kernel; however, omitting the fact that attention kernels are in essence asymmetric. Moreover, the complexity of deriving the GP posteriors remains high for large-scale data. In this work, we propose Kernel-Eigen Pair Sparse Variational Gaussian Processes (KEP-SVGP) for building uncertainty-aware self-attention where the asymmetry of attention kernels is tackled by Kernel SVD (KSVD) and a reduced complexity is acquired. Through KEP-SVGP, i) the SVGP pair induced by the two sets of singular vectors from KSVD w.r.t. the attention kernel fully characterizes the asymmetry; ii) using only a small set of adjoint eigenfunctions from KSVD, the derivation of SVGP posteriors can be based on the inversion of a diagonal matrix containing singular values, contributing to a reduction in time complexity; iii) an evidence lower bound is derived so that variational parameters and network weights can be optimized with it. Experiments verify our excellent performances and efficiency on in-distribution, distribution-shift and out-of-distribution benchmarks.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2402.01476v2",
+    "arxiv_id":"2402.01476v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Understanding Self-Attention of Self-Supervised Audio Transformers",
+    "authors":"Shu-wen Yang, Andy T. Liu, Hung-yi Lee",
+    "abstract":"Self-supervised Audio Transformers (SAT) enable great success in many downstream speech applications like ASR, but how they work has not been widely explored yet. In this work, we present multiple strategies for the analysis of attention mechanisms in SAT. We categorize attentions into explainable categories, where we discover each category possesses its own unique functionality. We provide a visualization tool for understanding multi-head self-attention, importance ranking strategies for identifying critical attention, and attention refinement techniques to improve model performance.",
+    "year":2020,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2006.03265v2",
+    "arxiv_id":"2006.03265v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Self-Rectifying Diffusion Sampling with Perturbed-Attention Guidance",
+    "authors":"Donghoon Ahn, Hyoungwon Cho, Jaewon Min, Wooseok Jang",
+    "abstract":"Recent studies have demonstrated that diffusion models are capable of generating high-quality samples, but their quality heavily depends on sampling guidance techniques, such as classifier guidance (CG) and classifier-free guidance (CFG). These techniques are often not applicable in unconditional generation or in various downstream tasks such as image restoration. In this paper, we propose a novel sampling guidance, called Perturbed-Attention Guidance (PAG), which improves diffusion sample quality across both unconditional and conditional settings, achieving this without requiring additional training or the integration of external modules. PAG is designed to progressively enhance the structure of samples throughout the denoising process. It involves generating intermediate samples with degraded structure by substituting selected self-attention maps in diffusion U-Net with an identity matrix, by considering the self-attention mechanisms' ability to capture structural information, and guiding the denoising process away from these degraded samples. In both ADM and Stable Diffusion, PAG surprisingly improves sample quality in conditional and even unconditional scenarios. Moreover, PAG significantly improves the baseline performance in various downstream tasks where existing guidances such as CG or CFG cannot be fully utilized, including ControlNet with empty prompts and image restoration such as inpainting and deblurring.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2403.17377v2",
+    "arxiv_id":"2403.17377v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Assessing the Impact of Attention and Self-Attention Mechanisms on the Classification of Skin Lesions",
+    "authors":"Rafael Pedro, Arlindo L. Oliveira",
+    "abstract":"Attention mechanisms have raised significant interest in the research community, since they promise significant improvements in the performance of neural network architectures. However, in any specific problem, we still lack a principled way to choose specific mechanisms and hyper-parameters that lead to guaranteed improvements. More recently, self-attention has been proposed and widely used in transformer-like architectures, leading to significant breakthroughs in some applications. In this work we focus on two forms of attention mechanisms: attention modules and self-attention. Attention modules are used to reweight the features of each layer input tensor. Different modules have different ways to perform this reweighting in fully connected or convolutional layers. The attention models studied are completely modular and in this work they will be used with the popular ResNet architecture. Self-Attention, originally proposed in the area of Natural Language Processing makes it possible to relate all the items in an input sequence. Self-Attention is becoming increasingly popular in Computer Vision, where it is sometimes combined with convolutional layers, although some recent architectures do away entirely with convolutions. In this work, we study and perform an objective comparison of a number of different attention mechanisms in a specific computer vision task, the classification of samples in the widely used Skin Cancer MNIST dataset. The results show that attention modules do sometimes improve the performance of convolutional neural network architectures, but also that this improvement, although noticeable and statistically significant, is not consistent in different settings. The results obtained with self-attention mechanisms, on the other hand, show consistent and significant improvements, leading to the best results even in architectures with a reduced number of parameters.",
+    "year":2021,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2112.12748v1",
+    "arxiv_id":"2112.12748v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Mechanics of Next Token Prediction with Self-Attention",
+    "authors":"Yingcong Li, Yixiao Huang, M. Emrullah Ildiz, Ankit Singh Rawat",
+    "abstract":"Transformer-based language models are trained on large datasets to predict the next token given an input sequence. Despite this simple training objective, they have led to revolutionary advances in natural language processing. Underlying this success is the self-attention mechanism. In this work, we ask: $\\textit{What}$ $\\textit{does}$ $\\textit{a}$ $\\textit{single}$ $\\textit{self-attention}$ $\\textit{layer}$ $\\textit{learn}$ $\\textit{from}$ $\\textit{next-token}$ $\\textit{prediction?}$ We show that training self-attention with gradient descent learns an automaton which generates the next token in two distinct steps: $\\textbf{(1)}$ $\\textbf{Hard}$ $\\textbf{retrieval:}$ Given input sequence, self-attention precisely selects the $\\textit{high-priority}$ $\\textit{input}$ $\\textit{tokens}$ associated with the last input token. $\\textbf{(2)}$ $\\textbf{Soft}$ $\\textbf{composition:}$ It then creates a convex combination of the high-priority tokens from which the next token can be sampled. Under suitable conditions, we rigorously characterize these mechanics through a directed graph over tokens extracted from the training data. We prove that gradient descent implicitly discovers the strongly-connected components (SCC) of this graph and self-attention learns to retrieve the tokens that belong to the highest-priority SCC available in the context window. Our theory relies on decomposing the model weights into a directional component and a finite component that correspond to hard retrieval and soft composition steps respectively. This also formalizes a related implicit bias formula conjectured in [Tarzanagh et al. 2023]. We hope that these findings shed light on how self-attention processes sequential data and pave the path toward demystifying more complex architectures.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2403.08081v1",
+    "arxiv_id":"2403.08081v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Principles of Discrete Time Mechanics: I. Particle Systems",
+    "authors":"George Jaroszkiewicz, Keith Norton",
+    "abstract":"We discuss the principles to be used in the construction of discrete time classical and quantum mechanics as applied to point particle systems. In the classical theory this includes the concept of virtual path and the construction of system functions from classical Lagrangians, Cadzow's variational principle applied to the action sum, Maeda-Noether and Logan invariants of the motion, elliptic and hyperbolic harmonic oscillator behaviour, gauge invariant electrodynamics and charge conservation, and the Grassmannian oscillator. First quantised discrete time mechanics is discussed via the concept of system amplitude, which permits the construction of all quantities of interest such as commutators and scattering amplitudes. We discuss stroboscopic quantum mechanics, or the construction of discrete time quantum theory from continuous time quantum theory and show how this works in detail for the free Newtonian particle. We conclude with an application of the Schwinger action principle to the important case of the quantised discrete time inhomogeneous oscillator.",
+    "year":1997,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/hep-th\/9703079v1",
+    "arxiv_id":"hep-th\/9703079v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Linear Complexity Randomized Self-attention Mechanism",
+    "authors":"Lin Zheng, Chong Wang, Lingpeng Kong",
+    "abstract":"Recently, random feature attentions (RFAs) are proposed to approximate the softmax attention in linear time and space complexity by linearizing the exponential kernel. In this paper, we first propose a novel perspective to understand the bias in such approximation by recasting RFAs as self-normalized importance samplers. This perspective further sheds light on an \\emph{unbiased} estimator for the whole softmax attention, called randomized attention (RA). RA constructs positive random features via query-specific distributions and enjoys greatly improved approximation fidelity, albeit exhibiting quadratic complexity. By combining the expressiveness in RA and the efficiency in RFA, we develop a novel linear complexity self-attention mechanism called linear randomized attention (LARA). Extensive experiments across various domains demonstrate that RA and LARA significantly improve the performance of RFAs by a substantial margin.",
+    "year":2022,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2204.04667v2",
+    "arxiv_id":"2204.04667v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"On the Global Self-attention Mechanism for Graph Convolutional Networks",
+    "authors":"Chen Wang, Chengyuan Deng",
+    "abstract":"Applying Global Self-attention (GSA) mechanism over features has achieved remarkable success on Convolutional Neural Networks (CNNs). However, it is not clear if Graph Convolutional Networks (GCNs) can similarly benefit from such a technique. In this paper, inspired by the similarity between CNNs and GCNs, we study the impact of the Global Self-attention mechanism on GCNs. We find that consistent with the intuition, the GSA mechanism allows GCNs to capture feature-based vertex relations regardless of edge connections; As a result, the GSA mechanism can introduce extra expressive power to the GCNs. Furthermore, we analyze the impacts of the GSA mechanism on the issues of overfitting and over-smoothing. We prove that the GSA mechanism can alleviate both the overfitting and the over-smoothing issues based on some recent technical developments. Experiments on multiple benchmark datasets illustrate both superior expressive power and less significant overfitting and over-smoothing problems for the GSA-augmented GCNs, which corroborate the intuitions and the theoretical results.",
+    "year":2020,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2010.10711v1",
+    "arxiv_id":"2010.10711v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Image Captioning using Multiple Transformers for Self-Attention Mechanism",
+    "authors":"Farrukh Olimov, Shikha Dubey, Labina Shrestha, Tran Trung Tin",
+    "abstract":"Real-time image captioning, along with adequate precision, is the main challenge of this research field. The present work, Multiple Transformers for Self-Attention Mechanism (MTSM), utilizes multiple transformers to address these problems. The proposed algorithm, MTSM, acquires region proposals using a transformer detector (DETR). Consequently, MTSM achieves the self-attention mechanism by transferring these region proposals and their visual and geometrical features through another transformer and learns the objects' local and global interconnections. The qualitative and quantitative results of the proposed algorithm, MTSM, are shown on the MSCOCO dataset.",
+    "year":2021,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2103.05103v1",
+    "arxiv_id":"2103.05103v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"DistrAttention: An Efficient and Flexible Self-Attention Mechanism on Modern GPUs",
+    "authors":"Haolin Jin, Mengbai Xiao, Yuan Yuan, Xiao Zhang",
+    "abstract":"The Transformer architecture has revolutionized deep learning, delivering the state-of-the-art performance in areas such as natural language processing, computer vision, and time series prediction. However, its core component, self-attention, has the quadratic time complexity relative to input sequence length, which hinders the scalability of Transformers. The exsiting approaches on optimizing self-attention either discard full-contextual information or lack of flexibility. In this work, we design DistrAttention, an effcient and flexible self-attention mechanism with the full context. DistrAttention achieves this by grouping data on the embedding dimensionality, usually referred to as $d$. We realize DistrAttention with a lightweight sampling and fusion method that exploits locality-sensitive hashing to group similar data. A block-wise grouping framework is further designed to limit the errors introduced by locality sensitive hashing. By optimizing the selection of block sizes, DistrAttention could be easily integrated with FlashAttention-2, gaining high-performance on modern GPUs. We evaluate DistrAttention with extensive experiments. The results show that our method is 37% faster than FlashAttention-2 on calculating self-attention. In ViT inference, DistrAttention is the fastest and the most accurate among approximate self-attention mechanisms. In Llama3-1B, DistrAttention still achieves the lowest inference time with only 1% accuray loss.",
+    "year":2025,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2507.17245v1",
+    "arxiv_id":"2507.17245v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Neural Attention: Enhancing QKV Calculation in Self-Attention Mechanism with Neural Networks",
+    "authors":"Muhan Zhang",
+    "abstract":"In the realm of deep learning, the self-attention mechanism has substantiated its pivotal role across a myriad of tasks, encompassing natural language processing and computer vision. Despite achieving success across diverse applications, the traditional self-attention mechanism primarily leverages linear transformations for the computation of query, key, and value (QKV), which may not invariably be the optimal choice under specific circumstances. This paper probes into a novel methodology for QKV computation-implementing a specially-designed neural network structure for the calculation. Utilizing a modified Marian model, we conducted experiments on the IWSLT 2017 German-English translation task dataset and juxtaposed our method with the conventional approach. The experimental results unveil a significant enhancement in BLEU scores with our method. Furthermore, our approach also manifested superiority when training the Roberta model with the Wikitext-103 dataset, reflecting a notable reduction in model perplexity compared to its original counterpart. These experimental outcomes not only validate the efficacy of our method but also reveal the immense potential in optimizing the self-attention mechanism through neural network-based QKV computation, paving the way for future research and practical applications. The source code and implementation details for our proposed method can be accessed at https:\/\/github.com\/ocislyjrti\/NeuralAttention.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2310.11398v2",
+    "arxiv_id":"2310.11398v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"A natural NISQ model of quantum self-attention mechanism",
+    "authors":"Shangshang Shi, Zhimin Wang, Jiaxin Li, Yanan Li",
+    "abstract":"The self-attention mechanism (SAM) has demonstrated remarkable success in various applications. However, training SAM on classical computers becomes computationally challenging as the number of trainable parameters grows. Quantum neural networks (QNNs) have been developed as a novel learning model that promises to provide speedup for pattern recognition using near-term Noisy Intermediate-Scale Quantum (NISQ) computers. In this work, we propose a completely natural way of implementing SAM in QNNs, resulting in the quantum self-attention mechanism (QSAM). The fundamental operations of SAM, such as calculating attention scores and producing attention features, are realized by only designing the data encoding and ansatz architecture appropriately. As these are the fundamental components of QNNs, our QSAM can be executed efficiently on near-term NISQ devices. Our QSAM models achieve better performance in terms of both accuracy and circuit complexity on the text categorization task. Moreover, the robustness of QSAM against various typical types of quantum noise is demonstrated, indicating the model's suitability for NISQ devices. The present QSAM will serve as the fundamental building blocks for developing large models of quantum attention neural networks for quantum advantageous applications.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2305.15680v1",
+    "arxiv_id":"2305.15680v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Parallel Scheduling Self-attention Mechanism: Generalization and Optimization",
+    "authors":"Mingfei Yu, Masahiro Fujita",
+    "abstract":"Over the past few years, self-attention is shining in the field of deep learning, especially in the domain of natural language processing(NLP). Its impressive effectiveness, along with ubiquitous implementations, have aroused our interest in efficiently scheduling the data-flow of corresponding computations onto architectures with many computing units to realize parallel computing. In this paper, based on the theory of self-attention mechanism and state-of-the-art realization of self-attention in language models, we propose a general scheduling algorithm, which is derived from the optimum scheduling for small instances solved by a satisfiability checking(SAT) solver, to parallelize typical computations of self-attention. Strategies for further optimization on skipping redundant computations are put forward as well, with which reductions of almost 25% and 50% of the original computations are respectively achieved for two widely-adopted application schemes of self-attention. With the proposed optimization adopted, we have correspondingly come up with another two scheduling algorithms. The proposed algorithms are applicable regardless of problem sizes, as long as the number of input vectors is divisible to the number of computing units available in the architecture. Due to the complexity of proving the correctness of the algorithms mathematically for general cases, we have conducted experiments to reveal their validity, together with the superior quality of the solutions provided by which, by solving SAT problems for particular instances.",
+    "year":2020,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2012.01114v1",
+    "arxiv_id":"2012.01114v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Riemannian Self-Attention Mechanism for SPD Networks",
+    "authors":"Rui Wang, Xiao-Jun Wu, Hui Li, Josef Kittler",
+    "abstract":"Symmetric positive definite (SPD) matrix has been demonstrated to be an effective feature descriptor in many scientific areas, as it can encode spatiotemporal statistics of the data adequately on a curved Riemannian manifold, i.e., SPD manifold. Although there are many different ways to design network architectures for SPD matrix nonlinear learning, very few solutions explicitly mine the geometrical dependencies of features at different layers. Motivated by the great success of self-attention mechanism in capturing long-range relationships, an SPD manifold self-attention mechanism (SMSA) is proposed in this paper using some manifold-valued geometric operations, mainly the Riemannian metric, Riemannian mean, and Riemannian optimization. Then, an SMSA-based geometric learning module (SMSA-GLM) is designed for the sake of improving the discrimination of the generated deep structured representations. Extensive experimental results achieved on three benchmarking datasets show that our modification against the baseline network further alleviates the information degradation problem and leads to improved accuracy.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2311.16738v1",
+    "arxiv_id":"2311.16738v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"ATTENTION2D: Communication Efficient Distributed Self-Attention Mechanism",
+    "authors":"Venmugil Elango",
+    "abstract":"Transformer-based models have emerged as a leading architecture for natural language processing, natural language generation, and image generation tasks. A fundamental element of the transformer architecture is self-attention, which allows the model to capture intricate dependencies within the data. However, the self-attention mechanism also incurs significant computational and memory costs, particularly for long sequences.   In this paper, we introduce ATTENTION2D, a novel approach that exploits parallelism along two dimensions - query and key\/value - of the self-attention operation. This method enables efficient distribution and parallelization of computations across multiple devices. Our approach facilitates asymptotically faster training and inference phases compared to previous methods, without relying on approximations or incurring additional computational or memory overheads. Furthermore, unlike existing techniques that struggle to scale with an increasing number of processing units, our approach effectively scales with additional processing units.   Our experimental results confirm the effectiveness of our method in improving communication efficiency and scalability. Compared to Ring Attention, our approach demonstrated up to a 5x performance boost on a GPT-3-like model using 64 NVIDIA A100 GPUs across 16 nodes, and up to a 9.4x performance boost on 64 NVIDIA H100 GPUs across 64 nodes.",
+    "year":2025,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2503.15758v2",
+    "arxiv_id":"2503.15758v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Towards understanding how attention mechanism works in deep learning",
+    "authors":"Tianyu Ruan, Shihua Zhang",
+    "abstract":"Attention mechanism has been extensively integrated within mainstream neural network architectures, such as Transformers and graph attention networks. Yet, its underlying working principles remain somewhat elusive. What is its essence? Are there any connections between it and traditional machine learning algorithms? In this study, we inspect the process of computing similarity using classic metrics and vector space properties in manifold learning, clustering, and supervised learning. We identify the key characteristics of similarity computation and information propagation in these methods and demonstrate that the self-attention mechanism in deep learning adheres to the same principles but operates more flexibly and adaptively. We decompose the self-attention mechanism into a learnable pseudo-metric function and an information propagation process based on similarity computation. We prove that the self-attention mechanism converges to a drift-diffusion process through continuous modeling provided the pseudo-metric is a transformation of a metric and certain reasonable assumptions hold. This equation could be transformed into a heat equation under a new metric. In addition, we give a first-order analysis of attention mechanism with a general pseudo-metric function. This study aids in understanding the effects and principle of attention mechanism through physical intuition. Finally, we propose a modified attention mechanism called metric-attention by leveraging the concept of metric learning to facilitate the ability to learn desired metrics more effectively. Experimental results demonstrate that it outperforms self-attention regarding training efficiency, accuracy, and robustness.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2412.18288v1",
+    "arxiv_id":"2412.18288v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Adversarial Joint Training with Self-Attention Mechanism for Robust End-to-End Speech Recognition",
+    "authors":"Lujun Li, Yikai Kang, Yuchen Shi, Ludwig K\u00fcrzinger",
+    "abstract":"Lately, the self-attention mechanism has marked a new milestone in the field of automatic speech recognition (ASR). Nevertheless, its performance is susceptible to environmental intrusions as the system predicts the next output symbol depending on the full input sequence and the previous predictions. Inspired by the extensive applications of the generative adversarial networks (GANs) in speech enhancement and ASR tasks, we propose an adversarial joint training framework with the self-attention mechanism to boost the noise robustness of the ASR system. Generally, it consists of a self-attention speech enhancement GAN and a self-attention end-to-end ASR model. There are two highlights which are worth noting in this proposed framework. One is that it benefits from the advancement of both self-attention mechanism and GANs; while the other is that the discriminator of GAN plays the role of the global discriminant network in the stage of the adversarial joint training, which guides the enhancement front-end to capture more compatible structures for the subsequent ASR module and thereby offsets the limitation of the separate training and handcrafted loss functions. With the adversarial joint optimization, the proposed framework is expected to learn more robust representations suitable for the ASR task. We execute systematic experiments on the corpus AISHELL-1, and the experimental results show that on the artificial noisy test set, the proposed framework achieves the relative improvements of 66% compared to the ASR model trained by clean data solely, 35.1% compared to the speech enhancement & ASR scheme without joint training, and 5.3% compared to multi-condition training.",
+    "year":2021,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2104.01471v1",
+    "arxiv_id":"2104.01471v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Architectural Implications of Graph Neural Networks",
+    "authors":"Zhihui Zhang, Jingwen Leng, Lingxiao Ma, Youshan Miao",
+    "abstract":"Graph neural networks (GNN) represent an emerging line of deep learning models that operate on graph structures. It is becoming more and more popular due to its high accuracy achieved in many graph-related tasks. However, GNN is not as well understood in the system and architecture community as its counterparts such as multi-layer perceptrons and convolutional neural networks. This work tries to introduce the GNN to our community. In contrast to prior work that only presents characterizations of GCNs, our work covers a large portion of the varieties for GNN workloads based on a general GNN description framework. By constructing the models on top of two widely-used libraries, we characterize the GNN computation at inference stage concerning general-purpose and application-specific architectures and hope our work can foster more system and architecture research for GNNs.",
+    "year":2020,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2009.00804v2",
+    "arxiv_id":"2009.00804v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures",
+    "authors":"Chenggang Zhao, Chengqi Deng, Chong Ruan, Damai Dai",
+    "abstract":"The rapid scaling of large language models (LLMs) has unveiled critical limitations in current hardware architectures, including constraints in memory capacity, computational efficiency, and interconnection bandwidth. DeepSeek-V3, trained on 2,048 NVIDIA H800 GPUs, demonstrates how hardware-aware model co-design can effectively address these challenges, enabling cost-efficient training and inference at scale. This paper presents an in-depth analysis of the DeepSeek-V3\/R1 model architecture and its AI infrastructure, highlighting key innovations such as Multi-head Latent Attention (MLA) for enhanced memory efficiency, Mixture of Experts (MoE) architectures for optimized computation-communication trade-offs, FP8 mixed-precision training to unlock the full potential of hardware capabilities, and a Multi-Plane Network Topology to minimize cluster-level network overhead. Building on the hardware bottlenecks encountered during DeepSeek-V3's development, we engage in a broader discussion with academic and industry peers on potential future hardware directions, including precise low-precision computation units, scale-up and scale-out convergence, and innovations in low-latency communication fabrics. These insights underscore the critical role of hardware and model co-design in meeting the escalating demands of AI workloads, offering a practical blueprint for innovation in next-generation AI systems.",
+    "year":2025,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2505.09343v2",
+    "arxiv_id":"2505.09343v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"MoH: Multi-Head Attention as Mixture-of-Head Attention",
+    "authors":"Peng Jin, Bo Zhu, Li Yuan, Shuicheng Yan",
+    "abstract":"In this work, we upgrade the multi-head attention mechanism, the core of the Transformer model, to improve efficiency while maintaining or surpassing the previous accuracy level. We show that multi-head attention can be expressed in the summation form. Drawing on the insight that not all attention heads hold equal significance, we propose Mixture-of-Head attention (MoH), a new architecture that treats attention heads as experts in the Mixture-of-Experts (MoE) mechanism. MoH has two significant advantages: First, MoH enables each token to select the appropriate attention heads, enhancing inference efficiency without compromising accuracy or increasing the number of parameters. Second, MoH replaces the standard summation in multi-head attention with a weighted summation, introducing flexibility to the attention mechanism and unlocking extra performance potential. Extensive experiments on ViT, DiT, and LLMs demonstrate that MoH outperforms multi-head attention by using only 50%-90% of the attention heads. Moreover, we demonstrate that pre-trained multi-head attention models, such as LLaMA3-8B, can be further continue-tuned into our MoH models. Notably, MoH-LLaMA3-8B achieves an average accuracy of 64.0% across 14 benchmarks, outperforming LLaMA3-8B by 2.4% by utilizing only 75% of the attention heads. We believe the proposed MoH is a promising alternative to multi-head attention and provides a strong foundation for developing advanced and efficient attention-based models.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2410.11842v3",
+    "arxiv_id":"2410.11842v3",
+    "source":"arxiv"
+  },
+  {
+    "title":"Dalorex: A Data-Local Program Execution and Architecture for Memory-bound Applications",
+    "authors":"Marcelo Orenes-Vera, Esin Tureci, David Wentzlaff, Margaret Martonosi",
+    "abstract":"Applications with low data reuse and frequent irregular memory accesses, such as graph or sparse linear algebra workloads, fail to scale well due to memory bottlenecks and poor core utilization. While prior work with prefetching, decoupling, or pipelining can mitigate memory latency and improve core utilization, memory bottlenecks persist due to limited off-chip bandwidth. Approaches doing processing in-memory (PIM) with Hybrid Memory Cube (HMC) overcome bandwidth limitations but fail to achieve high core utilization due to poor task scheduling and synchronization overheads. Moreover, the high memory-per-core ratio available with HMC limits strong scaling.   We introduce Dalorex, a hardware-software co-design that achieves high parallelism and energy efficiency, demonstrating strong scaling with >16,000 cores when processing graph and sparse linear algebra workloads. Over the prior work in PIM, both using 256 cores, Dalorex improves performance and energy consumption by two orders of magnitude through (1) a tile-based distributed-memory architecture where each processing tile holds an equal amount of data, and all memory operations are local; (2) a task-based parallel programming model where tasks are executed by the processing unit that is co-located with the target data; (3) a network design optimized for irregular traffic, where all communication is one-way, and messages do not contain routing metadata; (4) novel traffic-aware task scheduling hardware that maintains high core utilization; and (5) a data placement strategy that improves work balance.   This work proposes architectural and software innovations to provide the greatest scalability to date for running graph algorithms while still being programmable for other domains.",
+    "year":2022,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2207.13219v4",
+    "arxiv_id":"2207.13219v4",
+    "source":"arxiv"
+  },
+  {
+    "title":"Towards Assessing Spread in Sets of Software Architecture Designs",
+    "authors":"Vittorio Cortellessa, J. Andres Diaz-Pace, Daniele Di Pompeo, Michele Tucci",
+    "abstract":"Several approaches have recently used automated techniques to generate architecture design alternatives by means of optimization techniques. These approaches aim at improving an initial architecture with respect to quality aspects, such as performance, reliability, or maintainability. In this context, each optimization experiment usually produces a different set of architecture alternatives that is characterized by specific settings. As a consequence, the designer is left with the task of comparing such sets to identify the settings that lead to better solution sets for the problem. To assess the quality of solution sets, multi-objective optimization commonly relies on quality indicators. Among these, the quality indicator for the maximum spread estimates the diversity of the generated alternatives, providing a measure of how much of the solution space has been explored. However, the maximum spread indicator is computed only on the objective space and does not consider architectural information (e.g., components structure, design decisions) from the architectural space. In this paper, we propose a quality indicator for the spread that assesses the diversity of alternatives by taking into account architectural features. To compute the spread, we rely on a notion of distance between alternatives according to the way they were generated during the optimization. We demonstrate how our architectural quality indicator can be applied to a dataset from the literature.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2402.19171v1",
+    "arxiv_id":"2402.19171v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"LSQCA: Resource-Efficient Load\/Store Architecture for Limited-Scale Fault-Tolerant Quantum Computing",
+    "authors":"Takumi Kobori, Yasunari Suzuki, Yosuke Ueno, Teruo Tanimoto",
+    "abstract":"Current fault-tolerant quantum computer (FTQC) architectures utilize several encoding techniques to enable reliable logical operations with restricted qubit connectivity. However, such logical operations demand additional memory overhead to ensure fault tolerance. Since the main obstacle to practical quantum computing is the limited qubit count, our primary mission is to design floorplans that can reduce memory overhead without compromising computational capability. Despite extensive efforts to explore FTQC architectures, even the current state-of-the-art floorplan strategy devotes 50% of memory space to this overhead, not to data storage, to ensure unit-time random access to all logical qubits.   In this paper, we propose an FTQC architecture based on a novel floorplan strategy, Load\/Store Quantum Computer Architecture (LSQCA), which can achieve almost 100% memory density. The idea behind our architecture is to separate all memory regions into small computational space called Computational Registers (CR) and space-efficient memory space called Scan-Access Memory (SAM). We define an instruction set for these abstract structures and provide concrete designs named point-SAM and line-SAM architectures. With this design, we can improve the memory density by allowing variable-latency memory access while concealing the latency with other bottlenecks. We also propose optimization techniques to exploit properties of quantum programs observed in our static analysis, such as access locality in memory reference timestamps. Our numerical results indicate that LSQCA successfully leverages this idea. In a resource-restricted situation, a specific benchmark shows that we can achieve about 90% memory density with 5% increase in the execution time compared to a conventional floorplan, which achieves at most 50% memory density for unit-time random access. Our design ensures broad quantum applicability.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2412.20486v2",
+    "arxiv_id":"2412.20486v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Superiority of Multi-Head Attention in In-Context Linear Regression",
+    "authors":"Yingqian Cui, Jie Ren, Pengfei He, Jiliang Tang",
+    "abstract":"We present a theoretical analysis of the performance of transformer with softmax attention in in-context learning with linear regression tasks. While the existing literature predominantly focuses on the convergence of transformers with single-\/multi-head attention, our research centers on comparing their performance. We conduct an exact theoretical analysis to demonstrate that multi-head attention with a substantial embedding dimension performs better than single-head attention. When the number of in-context examples D increases, the prediction loss using single-\/multi-head attention is in O(1\/D), and the one for multi-head attention has a smaller multiplicative constant. In addition to the simplest data distribution setting, we consider more scenarios, e.g., noisy labels, local examples, correlated features, and prior knowledge. We observe that, in general, multi-head attention is preferred over single-head attention. Our results verify the effectiveness of the design of multi-head attention in the transformer architecture.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2401.17426v1",
+    "arxiv_id":"2401.17426v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"A Novel Reconfigurable Architecture of a DSP Processor for Efficient Mapping of DSP Functions using Field Programmable DSP Arrays",
+    "authors":"Amitabha Sinha, Mitrava Sarkar, Soumojit Acharyya, Suranjan Chakraborty",
+    "abstract":"Development of modern integrated circuit technologies makes it feasible to develop cheaper, faster and smaller special purpose signal processing function circuits. Digital Signal processing functions are generally implemented either on ASICs with inflexibility, or on FPGAs with bottlenecks of relatively smaller utilization factor or lower speed compared to ASIC. Field Programmable DSP Array (FPDA) is the proposed DSP dedicated device, redolent to FPGA, but with basic fixed common modules (CMs) (like adders, subtractors, multipliers, scaling units, shifters) instead of CLBs. This paper introduces the development of reconfigurable system architecture with a focus on FPDA that integrates different DSP functions like DFT, FFT, DCT, FIR, IIR, and DWT etc. The switching between DSP functions is occurred by reconfiguring the interconnection between CMs. Validation of the proposed architecture has been achieved on Virtex5 FPGA. The architecture provides sufficient amount of flexibility, parallelism and scalability.",
+    "year":2013,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1306.0089v1",
+    "arxiv_id":"1306.0089v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Double Multi-Head Attention for Speaker Verification",
+    "authors":"Miquel India, Pooyan Safari, Javier Hernando",
+    "abstract":"Most state-of-the-art Deep Learning systems for speaker verification are based on speaker embedding extractors. These architectures are commonly composed of a feature extractor front-end together with a pooling layer to encode variable-length utterances into fixed-length speaker vectors. In this paper we present Double Multi-Head Attention pooling, which extends our previous approach based on Self Multi-Head Attention. An additional self attention layer is added to the pooling layer that summarizes the context vectors produced by Multi-Head Attention into a unique speaker representation. This method enhances the pooling mechanism by giving weights to the information captured for each head and it results in creating more discriminative speaker embeddings. We have evaluated our approach with the VoxCeleb2 dataset. Our results show 6.09% and 5.23% relative improvement in terms of EER compared to Self Attention pooling and Self Multi-Head Attention, respectively. According to the obtained results, Double Multi-Head Attention has shown to be an excellent approach to efficiently select the most relevant features captured by the CNN-based front-ends from the speech signal.",
+    "year":2020,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2007.13199v2",
+    "arxiv_id":"2007.13199v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Partial Connection Based on Channel Attention for Differentiable Neural Architecture Search",
+    "authors":"Yu Xue, Jiafeng Qin",
+    "abstract":"Differentiable neural architecture search (DARTS), as a gradient-guided search method, greatly reduces the cost of computation and speeds up the search. In DARTS, the architecture parameters are introduced to the candidate operations, but the parameters of some weight-equipped operations may not be trained well in the initial stage, which causes unfair competition between candidate operations. The weight-free operations appear in large numbers which results in the phenomenon of performance crash. Besides, a lot of memory will be occupied during training supernet which causes the memory utilization to be low. In this paper, a partial channel connection based on channel attention for differentiable neural architecture search (ADARTS) is proposed. Some channels with higher weights are selected through the attention mechanism and sent into the operation space while the other channels are directly contacted with the processed channels. Selecting a few channels with higher attention weights can better transmit important feature information into the search space and greatly improve search efficiency and memory utilization. The instability of network structure caused by random selection can also be avoided. The experimental results show that ADARTS achieved 2.46% and 17.06% classification error rates on CIFAR-10 and CIFAR-100, respectively. ADARTS can effectively solve the problem that too many skip connections appear in the search process and obtain network structures with better performance.",
+    "year":2022,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2208.00791v1",
+    "arxiv_id":"2208.00791v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Repulsive Attention: Rethinking Multi-head Attention as Bayesian Inference",
+    "authors":"Bang An, Jie Lyu, Zhenyi Wang, Chunyuan Li",
+    "abstract":"The neural attention mechanism plays an important role in many natural language processing applications. In particular, the use of multi-head attention extends single-head attention by allowing a model to jointly attend information from different perspectives. Without explicit constraining, however, multi-head attention may suffer from attention collapse, an issue that makes different heads extract similar attentive features, thus limiting the model's representation power. In this paper, for the first time, we provide a novel understanding of multi-head attention from a Bayesian perspective. Based on the recently developed particle-optimization sampling techniques, we propose a non-parametric approach that explicitly improves the repulsiveness in multi-head attention and consequently strengthens model's expressiveness. Remarkably, our Bayesian interpretation provides theoretical inspirations on the not-well-understood questions: why and how one uses multi-head attention. Extensive experiments on various attention models and applications demonstrate that the proposed repulsive attention can improve the learned feature diversity, leading to more informative representations with consistent performance improvement on various tasks.",
+    "year":2020,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2009.09364v2",
+    "arxiv_id":"2009.09364v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Multi-Head Attention: Collaborate Instead of Concatenate",
+    "authors":"Jean-Baptiste Cordonnier, Andreas Loukas, Martin Jaggi",
+    "abstract":"Attention layers are widely used in natural language processing (NLP) and are beginning to influence computer vision architectures. Training very large transformer models allowed significant improvement in both fields, but once trained, these networks show symptoms of over-parameterization. For instance, it is known that many attention heads can be pruned without impacting accuracy. This work aims to enhance current understanding on how multiple heads interact. Motivated by the observation that attention heads learn redundant key\/query projections, we propose a collaborative multi-head attention layer that enables heads to learn shared projections. Our scheme decreases the number of parameters in an attention layer and can be used as a drop-in replacement in any transformer architecture. Our experiments confirm that sharing key\/query dimensions can be exploited in language understanding, machine translation and vision. We also show that it is possible to re-parametrize a pre-trained multi-head attention layer into our collaborative attention layer. Collaborative multi-head attention reduces the size of the key and query projections by 4 for same accuracy and speed. Our code is public.",
+    "year":2020,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2006.16362v2",
+    "arxiv_id":"2006.16362v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Beyond Parallelism: Synergistic Computational Graph Effects in Multi-Head Attention",
+    "authors":"Haitz S\u00e1ez de Oc\u00e1riz Borde",
+    "abstract":"Multi-head attention powers Transformer networks, the primary deep learning architecture behind the success of large language models (LLMs). Yet, the theoretical advantages of multi-head versus single-head attention, beyond mere parallel processing, remain underexplored. In this paper, we reframe multi-head attention as a system of potentially synergistic computational graphs, where each head functions as a feedforward directed acyclic graph (DAG) with a common sink state. We provide intuition and preliminary theoretical analysis of mixing time and minimax fidelity in this framework. Our results show that multi-head attention can synergistically enhance information propagation, yielding faster mixing times and minimax fidelity amplification under specific head-diversity conditions. Finally, we train single-head and multi-head Transformers, each with the same total number of parameters, on sequence manipulation tasks and empirically verify the predicted effects. The code is available at https:\/\/github.com\/haitzsaezdeocariz\/beyondparallelism.",
+    "year":2025,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2507.02944v2",
+    "arxiv_id":"2507.02944v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Improving Transformers with Dynamically Composable Multi-Head Attention",
+    "authors":"Da Xiao, Qingye Meng, Shengping Li, Xingyuan Yuan",
+    "abstract":"Multi-Head Attention (MHA) is a key component of Transformer. In MHA, attention heads work independently, causing problems such as low-rank bottleneck of attention score matrices and head redundancy. We propose Dynamically Composable Multi-Head Attention (DCMHA), a parameter and computation efficient attention architecture that tackles the shortcomings of MHA and increases the expressive power of the model by dynamically composing attention heads. At the core of DCMHA is a $\\it{Compose}$ function that transforms the attention score and weight matrices in an input-dependent way. DCMHA can be used as a drop-in replacement of MHA in any transformer architecture to obtain the corresponding DCFormer. DCFormer significantly outperforms Transformer on different architectures and model scales in language modeling, matching the performance of models with ~1.7x-2.0x compute. For example, DCPythia-6.9B outperforms open source Pythia-12B on both pretraining perplexity and downstream task evaluation. The code and models are available at https:\/\/github.com\/Caiyun-AI\/DCFormer.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2405.08553v2",
+    "arxiv_id":"2405.08553v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"On the Optimization and Generalization of Multi-head Attention",
+    "authors":"Puneesh Deora, Rouzbeh Ghaderi, Hossein Taheri, Christos Thrampoulidis",
+    "abstract":"The training and generalization dynamics of the Transformer's core mechanism, namely the Attention mechanism, remain under-explored. Besides, existing analyses primarily focus on single-head attention. Inspired by the demonstrated benefits of overparameterization when training fully-connected networks, we investigate the potential optimization and generalization advantages of using multiple attention heads. Towards this goal, we derive convergence and generalization guarantees for gradient-descent training of a single-layer multi-head self-attention model, under a suitable realizability condition on the data. We then establish primitive conditions on the initialization that ensure realizability holds. Finally, we demonstrate that these conditions are satisfied for a simple tokenized-mixture model. We expect the analysis can be extended to various data-model and architecture variations.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2310.12680v2",
+    "arxiv_id":"2310.12680v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Quality Attributes Optimization of Software Architecture: Research Challenges and Directions",
+    "authors":"Daniele Di Pompeo, Michele Tucci",
+    "abstract":"The estimation and improvement of quality attributes in software architectures is a challenging and time-consuming activity. On modern software applications, a model-based representation is crucial to face the complexity of such activity. One main challenge is that the improvement of distinctive quality attributes may require contrasting refactoring actions on the architecture, for instance when looking for trade-off between performance and reliability (or other non-functional quality attributes). In such cases, multi-objective optimization can provide the designer with a more complete view on these trade-offs and, consequently, can lead to identify suitable refactoring actions that take into account independent or even competing objectives.   In this paper, we present open challenges and research directions to fill current gaps in the context of multi-objective software architecture optimization.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2301.07516v1",
+    "arxiv_id":"2301.07516v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Low-Rank Bottleneck in Multi-head Attention Models",
+    "authors":"Srinadh Bhojanapalli, Chulhee Yun, Ankit Singh Rawat, Sashank J. Reddi",
+    "abstract":"Attention based Transformer architecture has enabled significant advances in the field of natural language processing. In addition to new pre-training techniques, recent improvements crucially rely on working with a relatively larger embedding dimension for tokens. Unfortunately, this leads to models that are prohibitively large to be employed in the downstream tasks. In this paper we identify one of the important factors contributing to the large embedding size requirement. In particular, our analysis highlights that the scaling between the number of heads and the size of each head in the current architecture gives rise to a low-rank bottleneck in attention heads, causing this limitation. We further validate this in our experiments. As a solution we propose to set the head size of an attention unit to input sequence length, and independent of the number of heads, resulting in multi-head attention layers with provably more expressive power. We empirically show that this allows us to train models with a relatively smaller embedding dimension and with better performance scaling.",
+    "year":2020,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2002.07028v1",
+    "arxiv_id":"2002.07028v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"The Anxiety of Influence: Bloom Filters in Transformer Attention Heads",
+    "authors":"Peter Balogh",
+    "abstract":"Some transformer attention heads appear to function as membership testers, dedicating themselves to answering the question \"has this token appeared before in the context?\" We identify these heads across four language models (GPT-2 small, medium, and large; Pythia-160M) and show that they form a spectrum of membership-testing strategies. Two heads (L0H1 and L0H5 in GPT-2 small) function as high-precision membership filters with false positive rates of 0-4\\% even at 180 unique context tokens -- well above the $d_\\text{head} = 64$ bit capacity of a classical Bloom filter. A third head (L1H11) shows the classic Bloom filter capacity curve: its false positive rate follows the theoretical formula $p \\approx (1 - e^{-kn\/m})^k$ with $R^2 = 1.0$ and fitted capacity $m \\approx 5$ bits, saturating by $n \\approx 20$ unique tokens. A fourth head initially identified as a Bloom filter (L3H0) was reclassified as a general prefix-attention head after confound controls revealed its apparent capacity curve was a sequence-length artifact. Together, the three genuine membership-testing heads form a multi-resolution system concentrated in early layers (0-1), taxonomically distinct from induction and previous-token heads, with false positive rates that decay monotonically with embedding distance -- consistent with distance-sensitive Bloom filters. These heads generalize broadly: they respond to any repeated token type, not just repeated names, with 43\\% higher generalization than duplicate-token-only heads. Ablation reveals these heads contribute to both repeated and novel token processing, indicating that membership testing coexists with broader computational roles. The reclassification of L3H0 through confound controls strengthens rather than weakens the case: the surviving heads withstand the scrutiny that eliminated a false positive in our own analysis.",
+    "year":2026,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2602.17526v1",
+    "arxiv_id":"2602.17526v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Interactive Multi-Head Self-Attention with Linear Complexity",
+    "authors":"Hankyul Kang, Ming-Hsuan Yang, Jongbin Ryu",
+    "abstract":"We propose an efficient interactive method for multi-head self-attention via decomposition. For existing methods using multi-head self-attention, the attention operation of each head is computed independently. However, we show that the interactions between cross-heads of the attention matrix enhance the information flow of the attention operation. Considering that the attention matrix of each head can be seen as a feature of networks, it is beneficial to establish connectivity between them to capture interactions better. However, a straightforward approach to capture the interactions between the cross-heads is computationally prohibitive as the complexity grows substantially with the high dimension of an attention matrix. In this work, we propose an effective method to decompose the attention operation into query- and key-less components. This will result in a more manageable size for the attention matrix, specifically for the cross-head interactions. Expensive experimental results show that the proposed cross-head interaction approach performs favorably against existing efficient attention methods and state-of-the-art backbone models.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2402.17507v1",
+    "arxiv_id":"2402.17507v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Sentiment analysis with adaptive multi-head attention in Transformer",
+    "authors":"Fanfei Meng, Chen-Ao Wang",
+    "abstract":"We propose a novel framework based on the attention mechanism to identify the sentiment of a movie review document. Previous efforts on deep neural networks with attention mechanisms focus on encoder and decoder with fixed numbers of multi-head attention. Therefore, we need a mechanism to stop the attention process automatically if no more useful information can be read from the memory.In this paper, we propose an adaptive multi-head attention architecture (AdaptAttn) which varies the number of attention heads based on length of sentences. AdaptAttn has a data preprocessing step where each document is classified into any one of the three bins small, medium or large based on length of the sentence. The document classified as small goes through two heads in each layer, the medium group passes four heads and the large group is processed by eight heads. We examine the merit of our model on the Stanford large movie review dataset. The experimental results show that the F1 score from our model is on par with the baseline model.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2310.14505v4",
+    "arxiv_id":"2310.14505v4",
+    "source":"arxiv"
+  },
+  {
+    "title":"Understanding Multi-Head Attention in Abstractive Summarization",
+    "authors":"Joris Baan, Maartje ter Hoeve, Marlies van der Wees, Anne Schuth",
+    "abstract":"Attention mechanisms in deep learning architectures have often been used as a means of transparency and, as such, to shed light on the inner workings of the architectures. Recently, there has been a growing interest in whether or not this assumption is correct. In this paper we investigate the interpretability of multi-head attention in abstractive summarization, a sequence-to-sequence task for which attention does not have an intuitive alignment role, such as in machine translation. We first introduce three metrics to gain insight in the focus of attention heads and observe that these heads specialize towards relative positions, specific part-of-speech tags, and named entities. However, we also find that ablating and pruning these heads does not lead to a significant drop in performance, indicating redundancy. By replacing the softmax activation functions with sparsemax activation functions, we find that attention heads behave seemingly more transparent: we can ablate fewer heads and heads score higher on our interpretability metrics. However, if we apply pruning to the sparsemax model we find that we can prune even more heads, raising the question whether enforced sparsity actually improves transparency. Finally, we find that relative positions heads seem integral to summarization performance and persistently remain after pruning.",
+    "year":2019,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1911.03898v1",
+    "arxiv_id":"1911.03898v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Serialized Multi-Layer Multi-Head Attention for Neural Speaker Embedding",
+    "authors":"Hongning Zhu, Kong Aik Lee, Haizhou Li",
+    "abstract":"This paper proposes a serialized multi-layer multi-head attention for neural speaker embedding in text-independent speaker verification. In prior works, frame-level features from one layer are aggregated to form an utterance-level representation. Inspired by the Transformer network, our proposed method utilizes the hierarchical architecture of stacked self-attention mechanisms to derive refined features that are more correlated with speakers. Serialized attention mechanism contains a stack of self-attention modules to create fixed-dimensional representations of speakers. Instead of utilizing multi-head attention in parallel, the proposed serialized multi-layer multi-head attention is designed to aggregate and propagate attentive statistics from one layer to the next in a serialized manner. In addition, we employ an input-aware query for each utterance with the statistics pooling. With more layers stacked, the neural network can learn more discriminative speaker embeddings. Experiment results on VoxCeleb1 dataset and SITW dataset show that our proposed method outperforms other baseline methods, including x-vectors and other x-vectors + conventional attentive pooling approaches by 9.7% in EER and 8.1% in DCF0.01.",
+    "year":2021,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2107.06493v1",
+    "arxiv_id":"2107.06493v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Multi-Head Attention for Multi-Modal Joint Vehicle Motion Forecasting",
+    "authors":"Jean Mercat, Thomas Gilles, Nicole El Zoghby, Guillaume Sandou",
+    "abstract":"This paper presents a novel vehicle motion forecasting method based on multi-head attention. It produces joint forecasts for all vehicles on a road scene as sequences of multi-modal probability density functions of their positions. Its architecture uses multi-head attention to account for complete interactions between all vehicles, and long short-term memory layers for encoding and forecasting. It relies solely on vehicle position tracks, does not need maneuver definitions, and does not represent the scene with a spatial grid. This allows it to be more versatile than similar model while combining any forecasting capabilities, namely joint forecast with interactions, uncertainty estimation, and multi-modality. The resulting prediction likelihood outperforms state-of-the-art models on the same dataset.",
+    "year":2019,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1910.03650v3",
+    "arxiv_id":"1910.03650v3",
+    "source":"arxiv"
+  },
+  {
+    "title":"Radiomics-enhanced Deep Multi-task Learning for Outcome Prediction in Head and Neck Cancer",
+    "authors":"Mingyuan Meng, Lei Bi, Dagan Feng, Jinman Kim",
+    "abstract":"Outcome prediction is crucial for head and neck cancer patients as it can provide prognostic information for early treatment planning. Radiomics methods have been widely used for outcome prediction from medical images. However, these methods are limited by their reliance on intractable manual segmentation of tumor regions. Recently, deep learning methods have been proposed to perform end-to-end outcome prediction so as to remove the reliance on manual segmentation. Unfortunately, without segmentation masks, these methods will take the whole image as input, such that makes them difficult to focus on tumor regions and potentially unable to fully leverage the prognostic information within the tumor regions. In this study, we propose a radiomics-enhanced deep multi-task framework for outcome prediction from PET\/CT images, in the context of HEad and neCK TumOR segmentation and outcome prediction challenge (HECKTOR 2022). In our framework, our novelty is to incorporate radiomics as an enhancement to our recently proposed Deep Multi-task Survival model (DeepMTS). The DeepMTS jointly learns to predict the survival risk scores of patients and the segmentation masks of tumor regions. Radiomics features are extracted from the predicted tumor regions and combined with the predicted survival risk scores for final outcome prediction, through which the prognostic information in tumor regions can be further leveraged. Our method achieved a C-index of 0.681 on the testing set, placing the 2nd on the leaderboard with only 0.00068 lower in C-index than the 1st place.",
+    "year":2022,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2211.05409v1",
+    "arxiv_id":"2211.05409v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Hardware-Centric Analysis of DeepSeek's Multi-Head Latent Attention",
+    "authors":"Robin Geens, Marian Verhelst",
+    "abstract":"Multi-Head Latent Attention (MLA), introduced in DeepSeek-V2, improves the efficiency of large language models by projecting query, key, and value tensors into a compact latent space. This architectural change reduces the KV-cache size and significantly lowers memory bandwidth demands, particularly in the autoregressive decode phase. This letter presents the first hardware-centric analysis of MLA, comparing it to conventional Multi-Head Attention (MHA) and evaluating its implications for accelerator performance. We identify two alternative execution schemes of MLA--reusing, resp. recomputing latent projection matrices--which offer distinct trade-offs between compute and memory access. Using the Stream design space exploration framework, we model their throughput and energy cost across a range of hardware platforms and find that MLA can shift attention workloads toward the compute-bound regime.   Our results show that MLA not only reduces bandwidth usage but also enables adaptable execution strategies aligned with hardware constraints. Compared to MHA, it provides more stable and efficient performance, particularly on bandwidth-limited hardware platforms. These findings emphasize MLA's relevance as a co-design opportunity for future AI accelerators.",
+    "year":2025,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2506.02523v1",
+    "arxiv_id":"2506.02523v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Multi-head Temporal Latent Attention",
+    "authors":"Keqi Deng, Philip C. Woodland",
+    "abstract":"While Transformer self-attention offers strong parallelism, the Key-Value (KV) cache grows linearly with sequence length and becomes a bottleneck for inference efficiency. Multi-head latent attention was recently developed to compress the KV cache into a low-rank latent space. This paper proposes Multi-head Temporal Latent Attention (MTLA), which further reduces the KV cache size along the temporal dimension, greatly lowering the memory footprint of self-attention inference. MTLA employs a hyper-network to dynamically merge temporally adjacent KV cache vectors. To address the mismatch between the compressed KV cache and processed sequence lengths, a stride-aware causal mask is proposed to ensure efficient parallel training and consistency with inference behaviour. Experiments across tasks, including speech translation, speech recognition, speech understanding and text summarisation, demonstrate that MTLA achieves competitive performance compared to standard Multi-Head Attention (MHA), while greatly improving inference speed and GPU memory usage. For example, on a English-German speech translation task, MTLA achieves a 5.3x speedup and a reduction in GPU memory usage by a factor of 8.3 compared to MHA, while maintaining translation quality.",
+    "year":2025,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2505.13544v3",
+    "arxiv_id":"2505.13544v3",
+    "source":"arxiv"
+  },
+  {
+    "title":"Explicit Multi-head Attention for Inter-head Interaction in Large Language Models",
+    "authors":"Runyu Peng, Yunhua Zhou, Demin Song, Kai Lv",
+    "abstract":"In large language models built upon the Transformer architecture, recent studies have shown that inter-head interaction can enhance attention performance. Motivated by this, we propose Multi-head Explicit Attention (MEA), a simple yet effective attention variant that explicitly models cross-head interaction. MEA consists of two key components: a Head-level Linear Composition (HLC) module that separately applies learnable linear combinations to the key and value vectors across heads, thereby enabling rich inter-head communication; and a head-level Group Normalization layer that aligns the statistical properties of the recombined heads. MEA shows strong robustness in pretraining, which allows the use of larger learning rates that lead to faster convergence, ultimately resulting in lower validation loss and improved performance across a range of tasks. Furthermore, we explore the parameter efficiency of MEA by reducing the number of attention heads and leveraging HLC to reconstruct them using low-rank \"virtual heads\". This enables a practical key-value cache compression strategy that reduces KV-cache memory usage by 50% with negligible performance loss on knowledge-intensive and scientific reasoning tasks, and only a 3.59% accuracy drop for Olympiad-level mathematical benchmarks.",
+    "year":2026,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2601.19611v1",
+    "arxiv_id":"2601.19611v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"RCMHA: Relative Convolutional Multi-Head Attention for Natural Language Modelling",
+    "authors":"Herman Sugiharto,  Aradea, Husni Mubarok",
+    "abstract":"The Attention module finds common usage in language modeling, presenting distinct challenges within the broader scope of Natural Language Processing. Multi-Head Attention (MHA) employs an absolute positional encoding, which imposes limitations on token length and entails substantial memory consumption during the processing of embedded inputs. The current remedy proposed by researchers involves the utilization of relative positional encoding, similar to the approach adopted in Transformer-XL or Relative Multi-Head Attention (RMHA), albeit the employed architecture consumes considerable memory resources. To address these challenges, this study endeavors to refine MHA, leveraging relative positional encoding in conjunction with the Depth-Wise Convolutional Layer architecture, which promises heightened accuracy coupled with minimized memory usage. The proposed RCMHA framework entails the modification of two integral components: firstly, the application of the Depth-Wise Convolutional Layer to the input embedding, encompassing Query, Key, and Value parameters; secondly, the incorporation of Relative Positional Encoding into the attention scoring phase, harmoniously integrated with Scaled Dot-Product Attention. Empirical experiments underscore the advantages of RCMHA, wherein it exhibits superior accuracy, boasting a score of 0.572 in comparison to alternative attention modules such as MHA, Multi-DConv-Head Attention (MDHA), and RMHA. Concerning memory utilization, RMHA emerges as the most frugal, demonstrating an average consumption of 2.98 GB, surpassing RMHA which necessitates 3.5 GB.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2308.03429v1",
+    "arxiv_id":"2308.03429v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Orthogonality Constrained Multi-Head Attention For Keyword Spotting",
+    "authors":"Mingu Lee, Jinkyu Lee, Hye Jin Jang, Byeonggeun Kim",
+    "abstract":"Multi-head attention mechanism is capable of learning various representations from sequential data while paying attention to different subsequences, e.g., word-pieces or syllables in a spoken word. From the subsequences, it retrieves richer information than a single-head attention which only summarizes the whole sequence into one context vector. However, a naive use of the multi-head attention does not guarantee such richness as the attention heads may have positional and representational redundancy. In this paper, we propose a regularization technique for multi-head attention mechanism in an end-to-end neural keyword spotting system. Augmenting regularization terms which penalize positional and contextual non-orthogonality between the attention heads encourages to output different representations from separate subsequences, which in turn enables leveraging structured information without explicit sequence models such as hidden Markov models. In addition, intra-head contextual non-orthogonality regularization encourages each attention head to have similar representations across keyword examples, which helps classification by reducing feature variability. The experimental results demonstrate that the proposed regularization technique significantly improves the keyword spotting performance for the keyword \"Hey Snapdragon\".",
+    "year":2019,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1910.04500v1",
+    "arxiv_id":"1910.04500v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Efficient Attention via Control Variates",
+    "authors":"Lin Zheng, Jianbo Yuan, Chong Wang, Lingpeng Kong",
+    "abstract":"Random-feature-based attention (RFA) is an efficient approximation of softmax attention with linear runtime and space complexity. However, the approximation gap between RFA and conventional softmax attention is not well studied. Built upon previous progress of RFA, we characterize this gap through the lens of control variates and show that RFA can be decomposed into a sum of multiple control variate estimators for each element in the sequence. This new framework reveals that exact softmax attention can be recovered from RFA by manipulating each control variate. Besides, it allows us to develop a more flexible form of control variates, resulting in a novel attention mechanism that significantly reduces the approximation gap while maintaining linear complexity. Extensive experiments demonstrate that our model outperforms state-of-the-art efficient attention mechanisms on both vision and language tasks.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2302.04542v1",
+    "arxiv_id":"2302.04542v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Learning Efficient Algorithms with Hierarchical Attentive Memory",
+    "authors":"Marcin Andrychowicz, Karol Kurach",
+    "abstract":"In this paper, we propose and investigate a novel memory architecture for neural networks called Hierarchical Attentive Memory (HAM). It is based on a binary tree with leaves corresponding to memory cells. This allows HAM to perform memory access in O(log n) complexity, which is a significant improvement over the standard attention mechanism that requires O(n) operations, where n is the size of the memory.   We show that an LSTM network augmented with HAM can learn algorithms for problems like merging, sorting or binary searching from pure input-output examples. In particular, it learns to sort n numbers in time O(n log n) and generalizes well to input sequences much longer than the ones seen during the training. We also show that HAM can be trained to act like classic data structures: a stack, a FIFO queue and a priority queue.",
+    "year":2016,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1602.03218v2",
+    "arxiv_id":"1602.03218v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Grounded Text-to-Image Synthesis with Attention Refocusing",
+    "authors":"Quynh Phung, Songwei Ge, Jia-Bin Huang",
+    "abstract":"Driven by the scalable diffusion models trained on large-scale datasets, text-to-image synthesis methods have shown compelling results. However, these models still fail to precisely follow the text prompt involving multiple objects, attributes, or spatial compositions. In this paper, we reveal the potential causes in the diffusion model's cross-attention and self-attention layers. We propose two novel losses to refocus attention maps according to a given spatial layout during sampling. Creating the layouts manually requires additional effort and can be tedious. Therefore, we explore using large language models (LLM) to produce these layouts for our method. We conduct extensive experiments on the DrawBench, HRS, and TIFA benchmarks to evaluate our proposed method. We show that our proposed attention refocusing effectively improves the controllability of existing approaches.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2306.05427v2",
+    "arxiv_id":"2306.05427v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Dual Cross-Attention for Medical Image Segmentation",
+    "authors":"Gorkem Can Ates, Prasoon Mohan, Emrah Celik",
+    "abstract":"We propose Dual Cross-Attention (DCA), a simple yet effective attention module that is able to enhance skip-connections in U-Net-based architectures for medical image segmentation. DCA addresses the semantic gap between encoder and decoder features by sequentially capturing channel and spatial dependencies across multi-scale encoder features. First, the Channel Cross-Attention (CCA) extracts global channel-wise dependencies by utilizing cross-attention across channel tokens of multi-scale encoder features. Then, the Spatial Cross-Attention (SCA) module performs cross-attention to capture spatial dependencies across spatial tokens. Finally, these fine-grained encoder features are up-sampled and connected to their corresponding decoder parts to form the skip-connection scheme. Our proposed DCA module can be integrated into any encoder-decoder architecture with skip-connections such as U-Net and its variants. We test our DCA module by integrating it into six U-Net-based architectures such as U-Net, V-Net, R2Unet, ResUnet++, DoubleUnet and MultiResUnet. Our DCA module shows Dice Score improvements up to 2.05% on GlaS, 2.74% on MoNuSeg, 1.37% on CVC-ClinicDB, 1.12% on Kvasir-Seg and 1.44% on Synapse datasets. Our codes are available at: https:\/\/github.com\/gorkemcanates\/Dual-Cross-Attention",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2303.17696v1",
+    "arxiv_id":"2303.17696v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Multi-Cast Attention Networks for Retrieval-based Question Answering and Response Prediction",
+    "authors":"Yi Tay, Luu Anh Tuan, Siu Cheung Hui",
+    "abstract":"Attention is typically used to select informative sub-phrases that are used for prediction. This paper investigates the novel use of attention as a form of feature augmentation, i.e, casted attention. We propose Multi-Cast Attention Networks (MCAN), a new attention mechanism and general model architecture for a potpourri of ranking tasks in the conversational modeling and question answering domains. Our approach performs a series of soft attention operations, each time casting a scalar feature upon the inner word embeddings. The key idea is to provide a real-valued hint (feature) to a subsequent encoder layer and is targeted at improving the representation learning process. There are several advantages to this design, e.g., it allows an arbitrary number of attention mechanisms to be casted, allowing for multiple attention types (e.g., co-attention, intra-attention) and attention variants (e.g., alignment-pooling, max-pooling, mean-pooling) to be executed simultaneously. This not only eliminates the costly need to tune the nature of the co-attention layer, but also provides greater extents of explainability to practitioners. Via extensive experiments on four well-known benchmark datasets, we show that MCAN achieves state-of-the-art performance. On the Ubuntu Dialogue Corpus, MCAN outperforms existing state-of-the-art models by $9\\%$. MCAN also achieves the best performing score to date on the well-studied TrecQA dataset.",
+    "year":2018,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1806.00778v1",
+    "arxiv_id":"1806.00778v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Attention is not not Explanation",
+    "authors":"Sarah Wiegreffe, Yuval Pinter",
+    "abstract":"Attention mechanisms play a central role in NLP systems, especially within recurrent neural network (RNN) models. Recently, there has been increasing interest in whether or not the intermediate representations offered by these modules may be used to explain the reasoning for a model's prediction, and consequently reach insights regarding the model's decision-making process. A recent paper claims that `Attention is not Explanation' (Jain and Wallace, 2019). We challenge many of the assumptions underlying this work, arguing that such a claim depends on one's definition of explanation, and that testing it needs to take into account all elements of the model, using a rigorous experimental design. We propose four alternative tests to determine when\/whether attention can be used as explanation: a simple uniform-weights baseline; a variance calibration based on multiple random seed runs; a diagnostic framework using frozen weights from pretrained models; and an end-to-end adversarial attention training protocol. Each allows for meaningful interpretation of attention mechanisms in RNN models. We show that even when reliable adversarial distributions can be found, they don't perform well on the simple diagnostic, indicating that prior work does not disprove the usefulness of attention mechanisms for explainability.",
+    "year":2019,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1908.04626v2",
+    "arxiv_id":"1908.04626v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Customizing the Inductive Biases of Softmax Attention using Structured Matrices",
+    "authors":"Yilun Kuang, Noah Amsel, Sanae Lotfi, Shikai Qiu",
+    "abstract":"The core component of attention is the scoring function, which transforms the inputs into low-dimensional queries and keys and takes the dot product of each pair. While the low-dimensional projection improves efficiency, it causes information loss for certain tasks that have intrinsically high-dimensional inputs. Additionally, attention uses the same scoring function for all input pairs, without imposing a distance-dependent compute bias for neighboring tokens in the sequence. In this work, we address these shortcomings by proposing new scoring functions based on computationally efficient structured matrices with high ranks, including Block Tensor-Train (BTT) and Multi-Level Low Rank (MLR) matrices. On in-context regression tasks with high-dimensional inputs, our proposed scoring functions outperform standard attention for any fixed compute budget. On language modeling, a task that exhibits locality patterns, our MLR-based attention method achieves improved scaling laws compared to both standard attention and variants of sliding window attention. Additionally, we show that both BTT and MLR fall under a broader family of efficient structured matrices capable of encoding either full-rank or distance-dependent compute biases, thereby addressing significant shortcomings of standard attention. Finally, we show that MLR attention has promising results for long-range time-series forecasting.",
+    "year":2025,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2509.07963v1",
+    "arxiv_id":"2509.07963v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Attention Debiasing for Token Pruning in Vision Language Models",
+    "authors":"Kai Zhao, Wubang Yuan, Yuchen Lin, Liting Ruan",
+    "abstract":"Vision-language models (VLMs) typically encode substantially more visual tokens than text tokens, resulting in significant token redundancy. Pruning uninformative visual tokens is therefore crucial for improving computational efficiency, and language-to-vision attention has become a widely used importance criterion for this purpose. However, we find that attention in VLMs is systematically biased. It disproportionately favors tokens appearing later in the sequence, manifesting as over-attention to lower image regions, and assigns inflated scores to semantically empty padding tokens. These behaviors stem from intrinsic recency bias and attention sink effects inherited from large language models (LLMs), and they distort attention-based pruning by preserving irrelevant visual content. To derive a pruning criterion better aligned with semantic relevance, we introduce two lightweight yet effective debiasing techniques that restore the reliability of attention. The first compensates for positional distortions by removing recency-induced attention trends, producing a content-aware and position-agnostic importance measure. The second suppresses attention sink effects by eliminating spurious attention on padding tokens. Our method is model-agnostic, pruning-method-agnostic, and task-agnostic, enabling plug-and-play integration with existing VLM pruning models. Despite its simplicity, our approach consistently delivers strong performance gains. We evaluate our method on ten vision-language benchmarks spanning both image-based and video-based tasks, in comparison with seven state-of-the-art visual token pruning methods and across two representative VLM architectures. Our method achieves substantial performance gains, demonstrating strong effectiveness and generalizability. Our code is available at https:\/\/github.com\/intcomp\/attention-bias.",
+    "year":2025,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2508.17807v2",
+    "arxiv_id":"2508.17807v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Quantifying attention via dwell time and engagement in a social media browsing environment",
+    "authors":"Ziv Epstein, Hause Lin, Gordon Pennycook, David Rand",
+    "abstract":"Modern computational systems have an unprecedented ability to detect, leverage and influence human attention. Prior work identified user engagement and dwell time as two key metrics of attention in digital environments, but these metrics have yet to be integrated into a unified model that can advance the theory andpractice of digital attention. We draw on work from cognitive science, digital advertising, and AI to propose a two-stage model of attention for social media environments that disentangles engagement and dwell. In an online experiment, we show that attention operates differently in these two stages and find clear evidence of dissociation: when dwelling on posts (Stage 1), users attend more to sensational than credible content, but when deciding whether to engage with content (Stage 2), users attend more to credible than sensational content. These findings have implications for the design and development of computational systems that measure and model human attention, such as newsfeed algorithms on social media.",
+    "year":2022,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2209.10464v2",
+    "arxiv_id":"2209.10464v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"First De-Trend then Attend: Rethinking Attention for Time-Series Forecasting",
+    "authors":"Xiyuan Zhang, Xiaoyong Jin, Karthick Gopalswamy, Gaurav Gupta",
+    "abstract":"Transformer-based models have gained large popularity and demonstrated promising results in long-term time-series forecasting in recent years. In addition to learning attention in time domain, recent works also explore learning attention in frequency domains (e.g., Fourier domain, wavelet domain), given that seasonal patterns can be better captured in these domains. In this work, we seek to understand the relationships between attention models in different time and frequency domains. Theoretically, we show that attention models in different domains are equivalent under linear conditions (i.e., linear kernel to attention scores). Empirically, we analyze how attention models of different domains show different behaviors through various synthetic experiments with seasonality, trend and noise, with emphasis on the role of softmax operation therein. Both these theoretical and empirical analyses motivate us to propose a new method: TDformer (Trend Decomposition Transformer), that first applies seasonal-trend decomposition, and then additively combines an MLP which predicts the trend component with Fourier attention which predicts the seasonal component to obtain the final prediction. Extensive experiments on benchmark time-series forecasting datasets demonstrate that TDformer achieves state-of-the-art performance against existing attention-based models.",
+    "year":2022,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2212.08151v1",
+    "arxiv_id":"2212.08151v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Radial Attention: $O(n\\log n)$ Sparse Attention with Energy Decay for Long Video Generation",
+    "authors":"Xingyang Li, Muyang Li, Tianle Cai, Haocheng Xi",
+    "abstract":"Recent advances in diffusion models have enabled high-quality video generation, but the additional temporal dimension significantly increases computational costs, making training and inference on long videos prohibitively expensive. In this paper, we identify a phenomenon we term Spatiotemporal Energy Decay in video diffusion models: post-softmax attention scores diminish as spatial and temporal distance between tokens increase, akin to the physical decay of signal or waves over space and time in nature. Motivated by this, we propose Radial Attention, a scalable sparse attention mechanism with $\\mathcal{O}(n \\log n)$ complexity that translates energy decay into exponentially decaying compute density, which is significantly more efficient than standard $\\mathcal{O}(n^2)$ dense attention and more expressive than linear attention. Specifically, Radial Attention employs a simple, static attention mask where each token attends to spatially nearby tokens, with the attention window size shrinking with temporal distance. Moreover, it allows pre-trained video diffusion models to extend their generation length with efficient LoRA-based fine-tuning. Extensive experiments show that Radial Attention maintains video quality across Wan2.1-14B, HunyuanVideo, and Mochi 1, achieving up to a 1.9$\\times$ speedup over the original dense attention. With minimal tuning, it enables video generation up to 4$\\times$ longer while reducing training costs by up to 4.4$\\times$ compared to direct fine-tuning and accelerating inference by up to 3.7$\\times$ compared to dense attention inference. Code is released at \\href{https:\/\/github.com\/mit-han-lab\/radial-attention}{https:\/\/github.com\/mit-han-lab\/radial-attention}.",
+    "year":2025,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2506.19852v2",
+    "arxiv_id":"2506.19852v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Single Headed Attention RNN: Stop Thinking With Your Head",
+    "authors":"Stephen Merity",
+    "abstract":"The leading approaches in language modeling are all obsessed with TV shows of my youth - namely Transformers and Sesame Street. Transformers this, Transformers that, and over here a bonfire worth of GPU-TPU-neuromorphic wafer scale silicon. We opt for the lazy path of old and proven techniques with a fancy crypto inspired acronym: the Single Headed Attention RNN (SHA-RNN). The author's lone goal is to show that the entire field might have evolved a different direction if we had instead been obsessed with a slightly different acronym and slightly different result. We take a previously strong language model based only on boring LSTMs and get it to within a stone's throw of a stone's throw of state-of-the-art byte level language model results on enwik8. This work has undergone no intensive hyperparameter optimization and lived entirely on a commodity desktop machine that made the author's small studio apartment far too warm in the midst of a San Franciscan summer. The final results are achievable in plus or minus 24 hours on a single GPU as the author is impatient. The attention mechanism is also readily extended to large contexts with minimal computation. Take that Sesame Street.",
+    "year":2019,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1911.11423v2",
+    "arxiv_id":"1911.11423v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Boosting Crowd Counting via Multifaceted Attention",
+    "authors":"Hui Lin, Zhiheng Ma, Rongrong Ji, Yaowei Wang",
+    "abstract":"This paper focuses on the challenging crowd counting task. As large-scale variations often exist within crowd images, neither fixed-size convolution kernel of CNN nor fixed-size attention of recent vision transformers can well handle this kind of variation. To address this problem, we propose a Multifaceted Attention Network (MAN) to improve transformer models in local spatial relation encoding. MAN incorporates global attention from a vanilla transformer, learnable local attention, and instance attention into a counting model. Firstly, the local Learnable Region Attention (LRA) is proposed to assign attention exclusively for each feature location dynamically. Secondly, we design the Local Attention Regularization to supervise the training of LRA by minimizing the deviation among the attention for different feature locations. Finally, we provide an Instance Attention mechanism to focus on the most important instances dynamically during training. Extensive experiments on four challenging crowd counting datasets namely ShanghaiTech, UCF-QNRF, JHU++, and NWPU have validated the proposed method. Codes: https:\/\/github.com\/LoraLinH\/Boosting-Crowd-Counting-via-Multifaceted-Attention.",
+    "year":2022,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2203.02636v1",
+    "arxiv_id":"2203.02636v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Elliptical Attention",
+    "authors":"Stefan K. Nielsen, Laziz U. Abdullaev, Rachel S. Y. Teo, Tan M. Nguyen",
+    "abstract":"Pairwise dot-product self-attention is key to the success of transformers that achieve state-of-the-art performance across a variety of applications in language and vision. This dot-product self-attention computes attention weights among the input tokens using Euclidean distance, which makes the model prone to representation collapse and vulnerable to contaminated samples. In this paper, we propose using a Mahalanobis distance metric for computing the attention weights to stretch the underlying feature space in directions of high contextual relevance. In particular, we define a hyper-ellipsoidal neighborhood around each query to increase the attention weights of the tokens lying in the contextually important directions. We term this novel class of attention Elliptical Attention. Our Elliptical Attention provides two benefits: 1) reducing representation collapse and 2) enhancing the model's robustness as Elliptical Attention pays more attention to contextually relevant information rather than focusing on some small subset of informative features. We empirically demonstrate the advantages of Elliptical Attention over the baseline dot-product attention and state-of-the-art attention methods on various practical tasks, including object classification, image segmentation, and language modeling across different data modalities.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2406.13770v2",
+    "arxiv_id":"2406.13770v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"A rich bounty of AGN in the 9 square degree Bootes survey: high-z obscured AGN and large-scale structure",
+    "authors":"R. C. Hickox, C. Jones, W. R. Forman, S. S. Murray",
+    "abstract":"We use observations from the 9 square degree multiwavelength survey in Bootes to identify hundreds of obscured active galactic nuclei (AGN) with high redshifts (z > 0.7), luminosities (L_bol > 10^45 ergs\/s), and moderate obscuring columns (N_H > 10^22 cm^-2), and to measure the clustering properties of X-ray AGN at z > 1. In the Bootes region, shallow (5 ks) Chandra X-ray observations have detected ~4,000 X-ray sources, and the same region has been mapped with deep optical imaging and by Spitzer IRAC, which detects ~300,000 point sources, of which ~30,000 have detections in all four IRAC bands, for which we can select AGN on the basis of their mid-IR colors. With the MMT\/Hectospec we have obtained modest resolution optical spectra for about half the X-ray sources (out to z > 3) and ~20,000 galaxies (out to z = 0.7). With this multiwavelength data we select >400 AGN per square degree (compared to 12 per square degree from SDSS). Among a sample of IRAC-selected AGN we identify 641 candidate obscured objects based on their R band and IRAC luminosities. We use X-ray stacking techniques to verify that they are obscured AGN and measure their absorbing column densities. We also measure the three-dimensional two-point correlation function for X-ray selected AGN.",
+    "year":2006,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/astro-ph\/0611654v1",
+    "arxiv_id":"astro-ph\/0611654v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"The Methanol Multibeam Survey",
+    "authors":"J. A. Green, the Methanol Multibeam Survey Collaboration",
+    "abstract":"A purpose built 7-beam methanol receiver, installed on the Parkes Radio Telescope, was used to survey the Galactic plane for newly forming high mass stars, pinpointed by strong methanol maser emission at 6.7 GHz. The Methanol Multibeam (MMB) survey observed over 60% of the Galactic plane, detecting close to 1000 sources. The MMB survey provides a huge resource for studies of high-mass star formation, an important stage in the evolution of the interstellar medium. The MMB survey is also a valuable resource for investigations into the structure and dynamics of our Galaxy: with narrow velocity ranges of emission (typically only a few km\/s) and velocities closely correlated with the systemic velocity of their surrounding molecular clouds, 6.7-GHz methanol masers provide estimates of the spiral arm velocities and their structure. I will discuss the techniques and properties of the MMB survey, before outlining recent results, which include the identification of regions of enhanced star formation believed to be indicative of the origins of the spiral arms and the interaction of the Galactic bar with the 3-kpc arms. I will also discuss the various follow-up programmes including a study of magnetic fields through associated hydroxyl masers.",
+    "year":2012,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1210.0979v1",
+    "arxiv_id":"1210.0979v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"The Dark Energy Survey",
+    "authors":" The Dark Energy Survey Collaboration",
+    "abstract":"We describe the Dark Energy Survey (DES), a proposed optical-near infrared survey of 5000 sq. deg of the South Galactic Cap to ~24th magnitude in SDSS griz, that would use a new 3 sq. deg CCD camera to be mounted on the Blanco 4-m telescope at Cerro Telolo Inter-American Observatory (CTIO). The survey data will allow us to measure the dark energy and dark matter densities and the dark energy equation of state through four independent methods: galaxy clusters, weak gravitational lensing tomography, galaxy angular clustering, and supernova distances. These methods are doubly complementary: they constrain different combinations of cosmological model parameters and are subject to different systematic errors. By deriving the four sets of measurements from the same data set with a common analysis framework, we will obtain important cross checks of the systematic errors and thereby make a substantial and robust advance in the precision of dark energy measurements.",
+    "year":2005,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/astro-ph\/0510346v1",
+    "arxiv_id":"astro-ph\/0510346v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"The SAMI Galaxy Survey: first 1000 galaxies",
+    "authors":"J. T. Allen, the SAMI Galaxy Survey Team",
+    "abstract":"The Sydney-AAO Multi-object Integral field spectrograph (SAMI) Galaxy Survey is an ongoing project to obtain integral field spectroscopic observations of ~3400 galaxies by mid-2016. Including the pilot survey, a total of ~1000 galaxies have been observed to date, making the SAMI Galaxy Survey the largest of its kind in existence. This unique dataset allows a wide range of investigations into different aspects of galaxy evolution.   The first public data from the SAMI Galaxy Survey, consisting of 107 galaxies drawn from the full sample, has now been released. By giving early access to SAMI data for the entire research community, we aim to stimulate research across a broad range of topics in galaxy evolution. As the sample continues to grow, the survey will open up a new and unique parameter space for galaxy evolution studies.",
+    "year":2014,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1409.4147v1",
+    "arxiv_id":"1409.4147v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"A Survey On Universal Adversarial Attack",
+    "authors":"Chaoning Zhang, Philipp Benz, Chenguo Lin, Adil Karjauv",
+    "abstract":"The intriguing phenomenon of adversarial examples has attracted significant attention in machine learning and what might be more surprising to the community is the existence of universal adversarial perturbations (UAPs), i.e. a single perturbation to fool the target DNN for most images. With the focus on UAP against deep classifiers, this survey summarizes the recent progress on universal adversarial attacks, discussing the challenges from both the attack and defense sides, as well as the reason for the existence of UAP. We aim to extend this work as a dynamic survey that will regularly update its content to follow new works regarding UAP or universal attack in a wide range of domains, such as image, audio, video, text, etc. Relevant updates will be discussed at: https:\/\/bit.ly\/2SbQlLG. We welcome authors of future works in this field to contact us for including your new finding.",
+    "year":2021,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2103.01498v2",
+    "arxiv_id":"2103.01498v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Roman Galactic Plane Survey Definition Committee Report",
+    "authors":"Roman Galactic Plane Survey Definition Committee",
+    "abstract":"The Roman Galactic Plane Survey (RGPS) is a 700-hour program approved for early definition as a community-designed General Astrophysics Survey. It was selected following a proposal call for science programs that would benefit from an early community-based definition (Sanderson et al 2024). The community was invited to submit white papers and science pitches with a deadline of May 20, 2024; the Roman Galactic Plane Survey Definition Committee (RGPS-DC) first met on Sep 11, 2024. Based on the input provided, the RGPS-DC recommends a survey consisting of three elements: (1) a wide-field science element (691 sq deg, 541 hrs) covering the Galactic plane, Galactic latitude |b|<2 deg and Galactic longitude l=+50.1 deg to -79 deg (281 deg), in four filters (F129, F159, F184, and F213) with higher latitude extensions for the bulge, the Serpens South\/W40 star formation region, and Carina, (2) a time-domain science element (19 sq deg , 130 hrs) of six fields, including the full Nuclear Stellar Disk (NSD) and Central Molecular Zone (CMZ), with coverage in seven filters and repeat observations in one or more filters with cadences from 11 minutes to weeks, and (3) a deep-field\/spectroscopic science element (4 sq deg , 30 hrs) consisting of fifteen Roman pointings (with a wide range of extinction, diffuse emission, stellar density and population) using longer exposure times in seven filters in addition to grism and prism observations. This document summarizes the science that can be done with this survey, the process of survey definition, and details on all of the program elements.",
+    "year":2025,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2511.07494v1",
+    "arxiv_id":"2511.07494v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"The Gaia-ESO Survey: calibration strategy",
+    "authors":"E. Pancino, the Gaia-ESO Survey collaboration",
+    "abstract":"The Gaia-ESO survey (GES) is now in its fifth and last year of observations, and has already produced tens of thousands of high-quality spectra of stars in all Milky Way components. This paper presents the strategy behind the selection of astrophysical calibration targets, ensuring that all GES results on radial velocities, atmospheric parameters, and chemical abundance ratios will be both internally consistent and easily comparable with other literature results, especially from other large spectroscopic surveys and from Gaia. The calibration of GES is particularly delicate because of: (i) the large space of parameters covered by its targets, ranging from dwarfs to giants, from O to M stars, and with a large range of metallicities, as well as including fast rotators, emission line objects, stars affected by veiling and so on; (ii) the variety of observing setups, with different wavelength ranges and resolution; and (iii) the choice of analyzing the data with many different state-of-the art methods, each stronger in a different region of the parameter space, which ensures a better understanding of systematic uncertainties. An overview of the GES calibration and homogenization strategy is also given, along with some examples of the usage and results of calibrators in GES iDR4 - the fourth internal GES data release, that will form the basis of the next GES public data release. The agreement between GES iDR4 recommended values and reference values for the calibrating objects are very satisfactory. The average offsets and spreads are generally compatible with the GES measurement errors, which in iDR4 data already meet the requirements set by the main GES scientific goals.",
+    "year":2016,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1610.06480v1",
+    "arxiv_id":"1610.06480v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"IRSF\/SIRIUS JHKs near-infrared variable star survey in the Magellanic Clouds",
+    "authors":"Yoshifusa Ita, the IRSF\/SIRIUS variable star survey team",
+    "abstract":"We carried out a NIR variable star survey toward the Large and Small Magellanic Clouds using the InfraRed Survey Facility (IRSF) at Sutherland, South African Astronomical Observatory. This survey project was initiated in Dember 2000, and since then, we kept monitoring a total area of 3 square degrees along the LMC bar and also an area of 1 square degree around the center of the SMC, sufficiently large to do statistical analysis and to make complete catalog of variable red giants in the Magellanic Clouds. The detection limits (S\/N=10) of the survey are 17.0, 16.5 and 15.5 at J, H and Ks, respectively. In this article, we present some results on infrared variables that are not detected by the previous optical surveys. We show that they do not fall on the standard period-Ks magnitude relation for Mira-type variables pulsating in the fundamental mode.",
+    "year":2009,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/0907.5244v1",
+    "arxiv_id":"0907.5244v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Ground-Based Optical Deep Pencil Beam Surveys",
+    "authors":"P. C. Boeshaar, V. E. Margoniner, the Deep Lens Survey Team",
+    "abstract":"The initial results of the Deep Lens Survey (http:\/\/dls.bell-labs.com) to identify possible brown dwarfs and extremely metal poor red halo subdwarfs near the hydrogen burning limit are presented. Individual deep CCD high galactic latitude survey fields appear to offer a low probability of discovering field BD's, but taken collectively offer an opportunity to begin addressing questions regarding the scale height and distribution of these objects. In all likelihood, the very depth of such surveys will greatly increase our knowledge of the coolest extreme halo objects, which currently are known in far fewer numbers than T dwarfs. Ultimately, the large volume surveyed by the Large Synoptic Survey Telescope will identify vast numbers of such objects, providing a more complete picture of their spatial distribution.",
+    "year":2002,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/astro-ph\/0208209v1",
+    "arxiv_id":"astro-ph\/0208209v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"The XMM-Newton Survey Science Centre Medium Sensitivity Survey",
+    "authors":"X. Barcons, F. J. Carrera, M. T. Ceballos, S. Mateos",
+    "abstract":"We present preliminary results on the XMM-Newton Survey Science Centre medium sensitivity survey (XMS), with 0.5-4.5 keV flux limit 2 10^{-14} erg\/cm2\/s. At present, 19 fields have been examined with a total of 239 X-ray sources. Identifications for about 2\/3 of these reveal that type 1 AGN dominate, but type 2 AGN, absorption-line galaxies and clusters as well as stars are also present. We also discuss on a few X-ray selected Broad-Absorption-Line QSOs found in this survey.",
+    "year":2002,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/astro-ph\/0211533v1",
+    "arxiv_id":"astro-ph\/0211533v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Stellar atmospheric parameters and the Gaia-ESO Survey experience with multiple analysis pipelines",
+    "authors":"R. Smiljanic, A. J. Korn, A. R. Casey, the Gaia-ESO Survey consortium",
+    "abstract":"To use libraries of observed stellar spectra, one needs to know the atmospheric parameters of the stars associated to those spectra. It is, however, hard to know what are the real levels of precision and accuracy of these parameters. To overcome this very same problem in a stellar survey, the Gaia-ESO Survey implements a comprehensive calibration effort together with the use of multiple parallel analysis methodologies. Here, we discuss the multiple analyses approach and the effort to understand the accuracy and precision of the provided stellar atmospheric parameters.",
+    "year":2017,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1709.05076v1",
+    "arxiv_id":"1709.05076v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"A Survey on Transformer Compression",
+    "authors":"Yehui Tang, Yunhe Wang, Jianyuan Guo, Zhijun Tu",
+    "abstract":"Transformer plays a vital role in the realms of natural language processing (NLP) and computer vision (CV), specially for constructing large language models (LLM) and large vision models (LVM). Model compression methods reduce the memory and computational cost of Transformer, which is a necessary step to implement large language\/vision models on practical devices. Given the unique architecture of Transformer, featuring alternative attention and feedforward neural network (FFN) modules, specific compression techniques are usually required. The efficiency of these compression methods is also paramount, as retraining large models on the entire training dataset is usually impractical. This survey provides a comprehensive review of recent compression methods, with a specific focus on their application to Transformer-based models. The compression methods are primarily categorized into pruning, quantization, knowledge distillation, and efficient architecture design (Mamba, RetNet, RWKV, etc.). In each category, we discuss compression methods for both language and vision tasks, highlighting common underlying principles. Finally, we delve into the relation between various compression methods, and discuss further directions in this domain.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2402.05964v2",
+    "arxiv_id":"2402.05964v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"DES Y3 + KiDS-1000: Consistent cosmology combining cosmic shear surveys",
+    "authors":"Dark Energy Survey, Kilo-Degree Survey Collaboration,  :, T. M. C. Abbott",
+    "abstract":"We present a joint cosmic shear analysis of the Dark Energy Survey (DES Y3) and the Kilo-Degree Survey (KiDS-1000) in a collaborative effort between the two survey teams. We find consistent cosmological parameter constraints between DES Y3 and KiDS-1000 which, when combined in a joint-survey analysis, constrain the parameter $S_8 = \u03c3_8 \\sqrt{\u03a9_{\\rm m}\/0.3}$ with a mean value of $0.790^{+0.018}_{-0.014}$. The mean marginal is lower than the maximum a posteriori estimate, $S_8=0.801$, owing to skewness in the marginal distribution and projection effects in the multi-dimensional parameter space. Our results are consistent with $S_8$ constraints from observations of the cosmic microwave background by Planck, with agreement at the $1.7\u03c3$ level. We use a Hybrid analysis pipeline, defined from a mock survey study quantifying the impact of the different analysis choices originally adopted by each survey team. We review intrinsic alignment models, baryon feedback mitigation strategies, priors, samplers and models of the non-linear matter power spectrum.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2305.17173v2",
+    "arxiv_id":"2305.17173v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"Shear-selected clusters from the Deep Lens Survey",
+    "authors":"V. E. Margoniner, the Deep Lens Survey Team",
+    "abstract":"Weak gravitational lensing has the potential to select clusters independently of their baryon content, dynamical state, and star formation history. We present steps toward the first shear-selected sample of clusters, from the Deep Lens Survey (DLS), a deep BVRz' imaging survey of 28 square degrees. Cluster redshifts are determined from photometric redshifts of members and from lensing tomography, and in some cases have been confirmed spectroscopically. DLS imaging data are also used to derive mass-to-light ratios, and upcoming Chandra and XMM time will yield X-ray luminosities and temperatures for a subsample of 12 clusters. Thus we can begin to address any baryon or luminous-matter bias which may be present in current optical and X-ray samples. When the DLS is complete, we expect to have a sample of ~ 100 shear-selected clusters from z ~ 0.2-1.",
+    "year":2003,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/astro-ph\/0303381v1",
+    "arxiv_id":"astro-ph\/0303381v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"The Kinematic Morphology-Density Relation from the SAMI Pilot Survey",
+    "authors":"L. M. R. Fogarty, the SAMI Galaxy Survey Team",
+    "abstract":"We present the kinematic morphology-density relation in three galaxy clusters, Abell 85, 168 and 2399, using data from the SAMI Pilot Survey. We classify the early-type galaxies in our sample as fast or slow rotators (FRs\/SRs) according to a measured proxy for their projected specific stellar angular momentum. We find each cluster contains both fast and slow rotators with and average fraction of SRs in the sample of $f_{SR}=0.15\\pm$0.04. We investigate this fraction within each cluster as a function of local projected galaxy density. For Abell 85 we find that $f_{SR}$ increases at high local density but for Abell 168 and 2399 this trend is not seen. We find SRs not just at the centres of our clusters but also on the outskirts and hypothesise that these SRs may have formed in group environments eventually accreted to the larger cluster.",
+    "year":2014,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1409.7271v1",
+    "arxiv_id":"1409.7271v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"Dark Energy Survey: 2.1% measurement of the Baryon Acoustic Oscillation scale from the final dataset",
+    "authors":"Juan Mena-Fern\u00e1ndez, Dark Energy Survey Collaboration",
+    "abstract":"Here, we present the angular diameter distance measurement obtained from the measurement of the Baryonic Acoustic Oscillation (BAO) feature using the completed Dark Energy Survey (DES) data, summarizing the main results of [Phys. Rev. D 110, 063514] and [Phys. Rev. D 110, 063515]. We use a galaxy sample optimized for BAO science in the redshift range 0.6 < z < 1.2, with an effective redshift of $z_{\\rm eff}$ = 0.85. Our consensus measurement constrains the ratio of the angular distance to the sound horizon scale to $D_M(z_{\\rm eff})\/r_d$ = 19.51 $\\pm$ 0.41. This measurement is found to be 2.13$\u03c3$ below the angular BAO scale predicted by Planck. To date, it represents the most precise measurement from purely photometric data, and the most precise from any Stage-III experiment at such high redshift. The analysis was performed blinded to the BAO position and is shown to be robust against analysis choices, data removal, redshift calibrations and observational systematics.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2409.08759v1",
+    "arxiv_id":"2409.08759v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"A Survey on Cross-Domain Sequential Recommendation",
+    "authors":"Shu Chen, Zitao Xu, Weike Pan, Qiang Yang",
+    "abstract":"Cross-domain sequential recommendation (CDSR) shifts the modeling of user preferences from flat to stereoscopic by integrating and learning interaction information from multiple domains at different granularities (ranging from inter-sequence to intra-sequence and from single-domain to cross-domain). In this survey, we first define the CDSR problem using a four-dimensional tensor and then analyze its multi-type input representations under multidirectional dimensionality reductions. Following that, we provide a systematic overview from both macro and micro views. From a macro view, we abstract the multi-level fusion structures of various models across domains and discuss their bridges for fusion. From a micro view, focusing on the existing models, we first discuss the basic technologies and then explain the auxiliary learning technologies. Finally, we exhibit the available public datasets and the representative experimental results as well as provide some insights into future directions for research in CDSR.",
+    "year":2024,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2401.04971v4",
+    "arxiv_id":"2401.04971v4",
+    "source":"arxiv"
+  },
+  {
+    "title":"Properties of barred galaxies in the MaNGA galaxy survey",
+    "authors":"A. Fraser-McKelvie, M. Merrifield, A. Arag\u00f3n-Salamanca, K. Masters",
+    "abstract":"We present the initial results of a census of 684 barred galaxies in the MaNGA galaxy survey. This large sample contains galaxies with a wide range of physical properties, and we attempt to link bar properties to key observables for the whole galaxy. We find the length of the bar, when normalised for galaxy size, is correlated with the distance of the galaxy from the star formation main sequence, with more passive galaxies hosting larger-scale bars. Ionised gas is observed along the bars of low-mass galaxies only, and these galaxies are generally star-forming and host short bars. Higher-mass galaxies do not contain H\u03b1 emission along their bars, however, but are more likely to host rings or H\u03b1 at the centre and ends of the bar. Our results suggest that different physical processes are at play in the formation and evolution of bars in low- and high-mass galaxies.",
+    "year":2019,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/1908.08350v1",
+    "arxiv_id":"1908.08350v1",
+    "source":"arxiv"
+  },
+  {
+    "title":"The Role of Time, Weather and Google Trends in Understanding and Predicting Web Survey Response",
+    "authors":"Qixiang Fang, Joep Burger, Ralph Meijers, Kees van Berkel",
+    "abstract":"In the literature about web survey methodology, significant efforts have been made to understand the role of time-invariant factors (e.g. gender, education and marital status) in (non-)response mechanisms. Time-invariant factors alone, however, cannot account for most variations in (non-)responses, especially fluctuations of response rates over time. This observation inspires us to investigate the counterpart of time-invariant factors, namely time-varying factors and the potential role they play in web survey (non-)response. Specifically, we study the effects of time, weather and societal trends (derived from Google Trends data) on the daily (non-)response patterns of the 2016 and 2017 Dutch Health Surveys. Using discrete-time survival analysis, we find, among others, that weekends, holidays, pleasant weather, disease outbreaks and terrorism salience are associated with fewer responses. Furthermore, we show that using these variables alone achieves satisfactory prediction accuracy of both daily and cumulative response rates when the trained model is applied to future unseen data. This approach has the further benefit of requiring only non-personal contextual information and thus involving no privacy issues. We discuss the implications of the study for survey research and data collection.",
+    "year":2020,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2011.02034v2",
+    "arxiv_id":"2011.02034v2",
+    "source":"arxiv"
+  },
+  {
+    "title":"A Survey on Efficient Training of Transformers",
+    "authors":"Bohan Zhuang, Jing Liu, Zizheng Pan, Haoyu He",
+    "abstract":"Recent advances in Transformers have come with a huge requirement on computing resources, highlighting the importance of developing efficient training techniques to make Transformer training faster, at lower cost, and to higher accuracy by the efficient use of computation and memory resources. This survey provides the first systematic overview of the efficient training of Transformers, covering the recent progress in acceleration arithmetic and hardware, with a focus on the former. We analyze and compare methods that save computation and memory costs for intermediate tensors during training, together with techniques on hardware\/algorithm co-design. We finally discuss challenges and promising areas for future research.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2302.01107v3",
+    "arxiv_id":"2302.01107v3",
+    "source":"arxiv"
+  },
+  {
+    "title":"Attention Mechanisms in Medical Image Segmentation: A Survey",
+    "authors":"Yutong Xie, Bing Yang, Qingbiao Guan, Jianpeng Zhang",
+    "abstract":"Medical image segmentation plays an important role in computer-aided diagnosis. Attention mechanisms that distinguish important parts from irrelevant parts have been widely used in medical image segmentation tasks. This paper systematically reviews the basic principles of attention mechanisms and their applications in medical image segmentation. First, we review the basic concepts of attention mechanism and formulation. Second, we surveyed over 300 articles related to medical image segmentation, and divided them into two groups based on their attention mechanisms, non-Transformer attention and Transformer attention. In each group, we deeply analyze the attention mechanisms from three aspects based on the current literature work, i.e., the principle of the mechanism (what to use), implementation methods (how to use), and application tasks (where to use). We also thoroughly analyzed the advantages and limitations of their applications to different tasks. Finally, we summarize the current state of research and shortcomings in the field, and discuss the potential challenges in the future, including task specificity, robustness, standard evaluation, etc. We hope that this review can showcase the overall research context of traditional and Transformer attention methods, provide a clear reference for subsequent research, and inspire more advanced attention research, not only in medical image segmentation, but also in other image analysis scenarios.",
+    "year":2023,
+    "citations":0,
+    "paper_url":"https:\/\/arxiv.org\/abs\/2305.17937v1",
+    "arxiv_id":"2305.17937v1",
+    "source":"arxiv"
+  }
+]

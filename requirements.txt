@@ -1,0 +1,15 @@
+flask
+streamlit
+google-generativeai
+anthropic
+groq
+openai
+faiss-cpu
+numpy
+pandas
+requests
+ragas
+datasets
+umap-learn
+plotly
+scikit-learn
