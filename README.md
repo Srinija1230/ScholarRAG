@@ -148,4 +148,3 @@ Tunable in `config.py`:
 ## 🖼️ Screenshot
 <img width="1470" height="956" alt="ScholarRAG UI" src="https://github.com/user-attachments/assets/3b2d3d79-e98b-45eb-b08b-355806f5431d" />
 
-![ScholarRAG UI](Screenshot%202026-03-27%20at%201.24.20%20PM.png)
