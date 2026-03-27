@@ -94,3 +94,6 @@ To update any model — change that one line, nothing else.
 - Papers are sourced from **arXiv only** — covers CS, Physics, Math, Biology, Economics
 - Does not search PubMed, IEEE, ACM, or other databases
 - Citation counts are not available from arXiv (shown as 0)
+
+<img width="1470" height="956" alt="Screenshot 2026-03-27 at 1 24 20 PM" src="https://github.com/user-attachments/assets/52d1cba4-4af4-494b-93d3-ee85d02a7b45" />
+
